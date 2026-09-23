@@ -57,7 +57,7 @@ export default function Home() {
         <div className="container">
           <div className="intro-split-grid">
             <div className="intro-image-wrap reveal">
-              <img src={(homeWhoWeAre?.image || '').replace(/^\\/+/, '')} alt="Who We Are" />
+              <img src={(homeWhoWeAre?.image || '').replace(/^\/+/, '')} alt="Who We Are" />
             </div>
             <div className="intro-text reveal reveal-d1">
               <span className="section-tag">{homeWhoWeAre?.tagline || ''}</span>
@@ -103,7 +103,7 @@ export default function Home() {
         <div className="container">
           <div className="feature-grid">
             <div className="feature-image reveal">
-              <img src={(whyChooseUs?.image || '').replace(/^\\/+/, '')} alt="Engineering &amp; Design Support" />
+              <img src={(whyChooseUs?.image || '').replace(/^\/+/, '')} alt="Engineering &amp; Design Support" />
             </div>
             <div className="feature-text reveal reveal-d1">
               <span className="section-tag">{whyChooseUs?.tagline || ''}</span>

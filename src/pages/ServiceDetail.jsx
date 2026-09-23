@@ -144,7 +144,7 @@ export default function ServiceDetail() {
 
             <div className="reveal reveal-d1 svc-sticky-col">
               <div style={{ aspectRatio: '4/3', overflow: 'hidden', background: 'var(--bg-2)', borderRadius: 'var(--radius-md)' }}>
-                <img src={(service.supportingImage || service.heroImage || 'img/hero-cnc.jpg').replace(/^\\/+/, '')} alt={service.name || ''} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={(service.supportingImage || service.heroImage || 'img/hero-cnc.jpg').replace(/^\/+/, '')} alt={service.name || ''} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <Link to={`/contact?service=${encodeURIComponent(service.name || '')}`} style={{ display: 'block', textAlign: 'center', marginTop: '20px', padding: '16px 32px', background: 'var(--accent)', color: '#fff', fontWeight: 700, fontSize: '0.9rem', letterSpacing: '0.04em', textDecoration: 'none', textTransform: 'uppercase', border: 'none', borderRadius: '50px', transition: 'background 0.2s', boxShadow: '0 4px 12px rgba(13,110,253,0.3)' }}>Request a Quote for This Service</Link>
             </div>
@@ -193,7 +193,7 @@ export default function ServiceDetail() {
                 {relatedItems.map((rel, idx) => (
                   <Link key={idx} to={`/${rel.slug || rel.id || ''}`} className="related-cap-card" style={{ display: 'flex', alignItems: 'center', gap: '20px', textDecoration: 'none', padding: '24px', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', background: 'var(--surface)', transition: 'all 0.25s ease' }}>
                     <div style={{ width: '68px', height: '68px', overflow: 'hidden', flexShrink: 0, background: 'var(--bg-2)', borderRadius: 'var(--radius)' }}>
-                      <img src={(rel.heroImage || rel.image || 'img/hero-cnc.jpg').replace(/^\\/+/, '')} alt={rel.name || ''} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      <img src={(rel.heroImage || rel.image || 'img/hero-cnc.jpg').replace(/^\/+/, '')} alt={rel.name || ''} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <div className="rcap-title" style={{ fontWeight: 700, color: 'var(--text)', marginBottom: '4px', fontSize: '1rem', transition: 'color 0.2s' }}>{rel.name || ''}</div>
