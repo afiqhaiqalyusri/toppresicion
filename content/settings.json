@@ -1,0 +1,51 @@
+{
+  "navVisibility": {
+    "home": {
+      "label": "Home",
+      "visible": true
+    },
+    "about": {
+      "label": "About Us",
+      "visible": true
+    },
+    "services": {
+      "label": "Services",
+      "visible": true
+    },
+    "quality": {
+      "label": "Quality",
+      "visible": false
+    },
+    "facilities": {
+      "label": "Facilities",
+      "visible": false
+    },
+    "careers": {
+      "label": "Careers",
+      "visible": true
+    },
+    "contact": {
+      "label": "Contact Us",
+      "visible": true
+    }
+  },
+  "media": {
+    "logo": "img/logo.png",
+    "uploads": [
+      {
+        "filename": "091be844-b9e6-4226-a58d-a9a53d0d7d3d.jpg",
+        "originalName": "Surface-Finishing-Grinding.jpg",
+        "path": "img/uploads/091be844-b9e6-4226-a58d-a9a53d0d7d3d.jpg",
+        "size": 745251,
+        "uploaded": "2026-09-01T01:00:29.612Z"
+      },
+      {
+        "filename": "3875181c-112b-4979-b4c0-f5ab1b336b9e.jpg",
+        "originalName": "images.jpg",
+        "path": "img/uploads/3875181c-112b-4979-b4c0-f5ab1b336b9e.jpg",
+        "size": 40376,
+        "uploaded": "2026-09-01T01:01:55.029Z"
+      }
+    ]
+  }
+}

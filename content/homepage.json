@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "badge": "",
+    "headline": "Precision.<br>Engineered.",
+    "subheadline": "Precision Manufacturing. Integrated Solutions.",
+    "body": "Delivering precision CNC machining, sheet metal fabrication, electromechanical assembly, and manufacturing solutions for demanding industrial applications.",
+    "ctaPrimary": "Request a Quote",
+    "ctaPrimaryLink": "/contact",
+    "ctaSecondary": "Explore Our Services",
+    "ctaSecondaryLink": "/capabilities",
+    "heroImage": "img/hero-cnc.jpg"
+  },
+  "homeWhoWeAre": {
+    "tagline": "Who We Are",
+    "title": "Your Trusted Partner in <span class=\"accent\">Precision Manufacturing</span>",
+    "body1": "Top Precision Manufacturing Sdn. Bhd. is a precision manufacturing company based in Bayan Lepas, Penang, specializing in CNC machining, sheet metal fabrication, and box build assembly for industrial applications.",
+    "body2": "Our capabilities cover the manufacturing of precision machined parts, fabricated sheet metal components, industrial enclosures, and electro-mechanical assemblies. We support customer requirements from individual components to more complete fabricated and assembled products, based on drawings, designs, specifications, and application requirements.\n\nLocated within the Bayan Lepas Free Industrial Zone, Top Precision Manufacturing operates in one of Penang's established industrial manufacturing areas, with a focus on supporting industrial equipment and related manufacturing applications.",
+    "image": "img/cleanroom.jpg"
+  },
+  "homeCapabilities": {
+    "tagline": "What We Do ",
+    "title": "Our Manufacturing <span class=\"accent\">Services</span>",
+    "description": "CNC Machining: Precision machining of custom components and complex parts using CNC milling and turning processes.\n\nSheet Metal Fabrication: Fabrication of industrial enclosures, panels, chassis, brackets, and custom sheet metal components.\n\nBox Build Assembly: Integration of fabricated structures, mechanical components, electrical hardware, PCB assemblies, and wiring into complete assemblies."
+  },
+  "whyChooseUs": {
+    "tagline": "Why Top Precision",
+    "title": "From Design to <span class=\"accent\">Manufacturing</span>",
+    "description": "We transform customer designs and manufacturing requirements into practical fabricated, machined, and assembled products. Our capabilities cover CNC machining, sheet metal fabrication, and box build assembly, allowing us to support different stages of industrial product manufacturing.",
+    "image": "img/cap-engineering.jpg",
+    "features": [
+      {
+        "title": "Design-Based Manufacturing",
+        "description": "Production based on customer drawings, CAD models, and specified requirements.",
+        "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5\"/></svg>"
+      },
+      {
+        "title": "Custom Manufacturing",
+        "description": "Solutions for components and assemblies designed around individual application requirements.",
+        "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M22 11.08V12a10 10 0 11-5.93-9.14\"/><polyline points=\"22 4 12 14.01 9 11.01\"/></svg>"
+      },
+      {
+        "title": "Integrated Capabilities",
+        "description": "Combination of machining, fabrication, and assembly capabilities to support more complete manufacturing requirements.",
+        "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><polyline points=\"12 6 12 12 16 14\"/></svg>"
+      },
+      {
+        "title": "Advanced CNC Machining",
+        "description": "Complex geometries held to +/-X.XXXXmm — every time.",
+        "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"/><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"/><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"/></svg>"
+      },
+      {
+        "title": "Quality Certified",
+        "description": "Documented QMS with CMM-verified inspection reports.",
+        "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M22 11.08V12a10 10 0 11-5.93-9.14\"/><polyline points=\"22 4 12 14.01 9 11.01\"/></svg>"
+      },
+      {
+        "title": "In-House DFM Review",
+        "description": "Resident engineers review drawings before cutting begins.",
+        "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M23 21v-2a4 4 0 00-3-3.87\"/><path d=\"M16 3.13a4 4 0 010 7.75\"/></svg>"
+      }
+    ]
+  },
+  "homeIndustries": {
+    "tagline": "Industries We Serve",
+    "title": "Precision Engineered for Demanding Industries",
+    "description": "Top Precision delivers advanced manufacturing solutions for high-tolerance, mission-critical applications across global B2B sectors."
+  },
+  "sectors": [
+    {
+      "name": "Industrial Equipment",
+      "image": "img/industry_automation.jpg",
+      "id": "automation-robotics",
+      "description": "Fabricated and machined components for industrial equipment and manufacturing systems."
+    },
+    {
+      "name": "Electrical Enclosures",
+      "image": "img/industry_semiconductor.jpg",
+      "id": "semiconductor-electronics",
+      "description": "Custom fabricated enclosures and structures for housing electrical and industrial equipment."
+    },
+    {
+      "name": "Precision Components",
+      "image": "img/industry_automotive.jpg",
+      "id": "automotive-new-energy-",
+      "description": "CNC-machined components produced according to customer drawings and technical requirements."
+    },
+    {
+      "name": "Custom Assemblies",
+      "image": "img/industry_medical.jpg",
+      "id": "medical-biomedical",
+      "description": "Integrated mechanical and electrical assemblies combining fabricated structures and internal components."
+    },
+    {
+      "name": "Industrial & Communication",
+      "image": "img/industry_oilgas.jpg",
+      "id": "industrial-communication"
+    }
+  ],
+  "homeCta": {
+    "tagline": "Start a Project Today",
+    "headlineOutline": "REQUEST.",
+    "headlineSolid": "WE DELIVER.",
+    "body": "Send us your drawings, STEP files, or specifications. Our engineering team responds within one business day with a detailed quotation, DFM notes, and lead-time commitment.",
+    "primaryBtnText": "Request a Quote",
+    "primaryBtnLink": "contact.html",
+    "secondaryBtnText": "+603-5548 9900",
+    "secondaryBtnLink": "tel:+60355489900"
+  }
+}

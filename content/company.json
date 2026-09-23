@@ -1,0 +1,92 @@
+{
+  "company": {
+    "name": "Top Precision Manufacturing Sdn. Bhd.",
+    "tagline": "Engineering Precision. Delivering Excellence.",
+    "regNumber": "202401008710 (1554560-W)",
+    "sstReg": "",
+    "established": "March 2024",
+    "employees": "80+",
+    "facilitySize": "10000+",
+    "cncMachines": "5+",
+    "linkedIn": "https://linkedin.com",
+    "facebook": "https://facebook.com",
+    "location": "Bayan Lepas Free Industrial Zone (FIZ), Penang, Malaysia"
+  },
+  "history": [
+    {
+      "year": "March 2024",
+      "title": "Company Established",
+      "body": "Top Precision Manufacturing Sdn. Bhd. was established."
+    },
+    {
+      "year": "March 2025",
+      "title": "Operations Commenced",
+      "body": "Manufacturing operations commenced in Bayan Lepas Free Industrial Zone (FIZ), Penang, Malaysia."
+    }
+  ],
+  "values": [
+    {
+      "id": "integrity",
+      "title": "Action",
+      "body": "Translating intent into measurable results. Delivering quality products and responsive service that bring real benefits to our clients and communities."
+    },
+    {
+      "id": "precision",
+      "title": "Kindness",
+      "body": "Treating every customer, partner and colleague with integrity and goodwill. Honesty in every transaction to build long-term trust."
+    },
+    {
+      "id": "innovation",
+      "title": "Learning",
+      "body": "Investing in technology, skills and processes to stay ahead of industry demands and offer ever-better solutions to our manufacturing partners."
+    },
+    {
+      "id": "reliability",
+      "title": "Success",
+      "body": "Our success is defined by the success of our clients. We are committed to growing together through innovation, reliability and mutual respect."
+    }
+  ],
+  "policies": [
+    {
+      "id": "quality",
+      "title": "Quality Policy",
+      "body": "Top Precision Manufacturing Sdn Bhd is committed to consistently providing precision-engineered components and services that meet or exceed customer requirements. We achieve this through a robust ISO 9001:2015-certified quality management system, continuous employee development, and ongoing investment in state-of-the-art manufacturing technology."
+    },
+    {
+      "id": "environment",
+      "title": "Environmental Policy",
+      "body": "We are committed to conducting all manufacturing operations in an environmentally responsible manner. This includes minimising waste, reducing energy consumption, complying with all applicable environmental regulations, and continually improving our environmental performance."
+    },
+    {
+      "id": "health-safety",
+      "title": "Health & Safety Policy",
+      "body": "The health, safety, and welfare of our employees, contractors, and visitors is our highest priority. We maintain a safe working environment through regular risk assessments, safety training, and strict adherence to occupational safety and health regulations."
+    }
+  ],
+  "certificates": [
+    {
+      "id": "iso9001",
+      "name": "ISO 9001:2015",
+      "issuer": "Bureau Veritas",
+      "year": "2019",
+      "description": "Quality Management System certification for precision manufacturing.",
+      "image": ""
+    },
+    {
+      "id": "as9100",
+      "name": "AS9100 Rev D",
+      "issuer": "Lloyd's Register",
+      "year": "2020",
+      "description": "Aerospace Quality Management System standard.",
+      "image": ""
+    },
+    {
+      "id": "iso14001",
+      "name": "ISO 14001:2015",
+      "issuer": "SGS",
+      "year": "2021",
+      "description": "Environmental Management System certification.",
+      "image": ""
+    }
+  ]
+}

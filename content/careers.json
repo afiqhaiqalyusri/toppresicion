@@ -1,0 +1,54 @@
+{
+  "jobs": [
+    {
+      "id": "cnc-machinist",
+      "title": "CNC Machinist",
+      "type": "Full-Time",
+      "department": "Manufacturing",
+      "location": "Bayan Lepas, Pulau Pinang",
+      "description": "Operate and program CNC machining centres (milling and turning). ",
+      "requirements": "Diploma in Mechanical Engineering or equivalent. Fanuc/Siemens controller experience preferred.",
+      "posted": "2026-09-01"
+    },
+    {
+      "id": "production-manager",
+      "title": "Mechanical Assembly Technician",
+      "type": "Full-Time",
+      "department": "Manufacturing",
+      "location": "Bayan Lepas, Pulau Pinang",
+      "description": "Responsible for assembling, fitting, and testing mechanical components and assemblies according to technical drawings, specifications, and quality standards.",
+      "requirements": "Dilpoma or Degree in Engineering or Manufacturing. ",
+      "posted": "2026-09-01"
+    },
+    {
+      "id": "software-engineer",
+      "title": "Electrical Assembly Technician",
+      "type": "Full-Time",
+      "department": "Manufacturing",
+      "location": "Bayan Lepas, Pulau Pinang",
+      "description": "Responsible for assembling, wiring, and testing electrical components and systems according to technical drawings, specifications, and quality standa",
+      "requirements": "Diploma or Degree in Electrical and related",
+      "posted": "2026-09-01"
+    },
+    {
+      "id": "quality-engineer",
+      "title": "Quality Inspector",
+      "type": "Full-Time",
+      "department": "Quality Control",
+      "location": "Bayan Lepas, Pulau Pinang",
+      "description": "Maintain and improve the QMS. Conduct incoming inspection, in-process QC, and final inspection.",
+      "requirements": "Degree in Engineering. ISO 9001 internal auditor experience preferred.",
+      "posted": "2026-09-01"
+    },
+    {
+      "id": "internship",
+      "title": "General Internship (Engineering / Ops)",
+      "type": "Internship",
+      "department": "Various",
+      "location": "Bayan Lepas, Pulau Pinang",
+      "description": "Hands-on internship programme covering CNC operations, quality control, and production planning.",
+      "requirements": "Current students in Mechanical, Electrical, or related field.",
+      "posted": "2026-09-01"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "capabilitiesOverview": {
+    "heroImage": "img/hero-cnc.jpg",
+    "heroTitle": "Manufacturing Capabilities",
+    "description": "We deliver comprehensive manufacturing solutions, combining advanced machining, precision fabrication, and expert assembly to meet the demanding requirements of our global clients."
+  },
+  "services": [
+    {
+      "slug": "cnc-machining",
+      "name": "CNC Machining",
+      "shortDescription": "Precision CNC machining for custom components, complex parts, and industrial applications.",
+      "heroImage": "img/uploads/chatgpt-image-sep-21--2026--11-54-00-am-1789962875.png",
+      "overview": "Top Precision Manufacturing provides CNC machining solutions for producing custom precision components from raw material. Our capability supports components with complex geometries and detailed features through controlled CNC machining operations.\n\nWe work with digital designs and machining requirements to produce components according to specified dimensions and geometries. Our CNC capability is suitable for custom parts and industrial components where controlled machining and repeatable production are required.",
+      "supportingImage": "img/uploads/cnc-workshop-under-2mb-1789954673.jpg",
+      "bottomHeadline": "Precision Machining for Complex Components",
+      "bottomDescription": "Our CNC machining capability supports custom components requiring controlled material removal and accurate reproduction of complex geometries. The machining approach considers component design, raw material, machining requirements, and finishing requirements to produce parts according to customer specifications.",
+      "capabilities": [
+        {
+          "title": "CNC Milling",
+          "description": "Precision material removal for producing detailed component geometries, profiles, holes, pockets, and other machined features."
+        },
+        {
+          "title": "CNC Turning",
+          "description": "Machining of cylindrical and rotational components according to required dimensions and component geometry."
+        },
+        {
+          "title": "Multi-Axis Machining",
+          "description": "Machining operations involving multiple machining directions for components with more complex geometries and features."
+        },
+        {
+          "title": "Custom CNC Components",
+          "description": "Production of custom machined components based on customer drawings, CAD models, and technical requirements."
+        }
+      ],
+      "materials": [
+        "Aluminium",
+        "Plastic",
+        "Cooper",
+        "Cast Iron",
+        "Stainless Steel",
+        "Steel"
+      ],
+      "stats": [
+        {
+          "label": "Material",
+          "value": "5+"
+        },
+        {
+          "label": "Tolerance",
+          "value": "±0.01"
+        },
+        {
+          "label": "Maximum Product Size",
+          "value": "950 x 450 x 250"
+        }
+      ],
+      "machines": [
+        {
+          "name": "CNC Milling",
+          "brand": "Brother",
+          "model": "SPEEDIO S700Xd1",
+          "axis": "3 axis",
+          "workingArea": "",
+          "tolerance": "0.01",
+          "quantity": 5
+        },
+        {
+          "name": "CNC Milling",
+          "brand": "Brother",
+          "model": "SPEEDIO S500Xd1",
+          "axis": "3 axis",
+          "workingArea": "",
+          "tolerance": "0.01",
+          "quantity": 2
+        },
+        {
+          "name": "CNC Milling",
+          "brand": "Brother",
+          "model": "SPEEDIO S1000Xd2",
+          "axis": "3  axis",
+          "workingArea": "",
+          "tolerance": "0.01",
+          "quantity": 1
+        }
+      ],
+      "relatedCapabilityIds": [
+        "sheet-metal-box-build",
+        "quality-inspection-testing"
+      ],
+      "materialsTitle": ""
+    },
+    {
+      "slug": "box-build-assembly",
+      "name": "Box Build Assembly",
+      "shortDescription": "Integrated assembly of mechanical and electrical components into complete industrial enclosures and equipment assemblies, including AOI (Automated Optical Inspection) machines.",
+      "heroImage": "img/hero-cnc.jpg",
+      "overview": "Top Precision Manufacturing provides box build assembly solutions for industrial equipment and electrical enclosure applications, with extensive experience in assembling AOI (Automated Optical Inspection) systems. Our capability supports the integration of fabricated structures, mechanical components, electrical hardware, PCB assemblies, and wiring into complete assemblies based on customer requirements.\n\nOur box build capability brings multiple components and sub-assemblies together within a structured enclosure or equipment assembly. This provides customers with an integrated manufacturing solution for products requiring both mechanical construction and electrical component integration.",
+      "supportingImage": "img/hero-cnc.jpg",
+      "bottomHeadline": "Integrated Assembly for Complete Equipment",
+      "bottomDescription": "Box build assembly combines fabricated structures and individual components into complete equipment or enclosure assemblies. Our capability supports the organized installation of mechanical hardware, PCB assemblies, electrical components, and wiring to create a structured finished unit according to the required configuration.",
+      "capabilities": [
+        {
+          "title": "Mechanical Assembly",
+          "description": "Integration of fabricated structures, brackets, mounting hardware, DIN rails, standoffs, and other mechanical components."
+        },
+        {
+          "title": "Electrical Integration",
+          "description": "Installation and integration of electrical components and supporting hardware within industrial equipment and enclosure structures."
+        },
+        {
+          "title": "PCBA Mounting",
+          "description": "Mounting and integration of printed circuit board assemblies within the enclosure according to the required configuration."
+        },
+        {
+          "title": "Cable Routing & Enclosure Assembly",
+          "description": "Organized routing of wiring and installation of enclosure covers, panels, gaskets, and supporting components."
+        }
+      ],
+      "materials": [],
+      "stats": [
+        {
+          "value": "4",
+          "label": "Core Assembly Capabilities"
+        },
+        {
+          "value": "Multi-Component",
+          "label": "Component Integration"
+        },
+        {
+          "value": "Complete",
+          "label": "Box Build Assembly"
+        }
+      ],
+      "machines": [],
+      "relatedCapabilityIds": [
+        "sheet-metal-box-build",
+        "cnc-machining"
+      ]
+    }
+  ]
+}
