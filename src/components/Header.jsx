@@ -57,8 +57,8 @@ export default function Header() {
   };
 
   let logoSrc = 'img/logo.png';
-  if (media?.logo) {
-    logoSrc = media.logo.startsWith('/') ? media.logo : '/' + media.logo;
+  if (media && media.logo) {
+    logoSrc = media.logo.startsWith('/') ? media.logo.substring(1) : media.logo;
   }
 
   return (

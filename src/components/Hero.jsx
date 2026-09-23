@@ -6,7 +6,7 @@ export default function Hero({ data }) {
   
   let heroImage = 'img/hero-cnc.jpg';
   if (data.heroImage) {
-    heroImage = data.heroImage.startsWith('/') ? data.heroImage : '/' + data.heroImage;
+    heroImage = data.heroImage.startsWith('/') ? data.heroImage.substring(1) : data.heroImage;
   }
 
   return (
