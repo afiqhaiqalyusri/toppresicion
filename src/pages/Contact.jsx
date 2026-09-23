@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PageHero from '../components/PageHero';
 import { contact } from '../content';
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false);
+
+  const handleEmailClick = (e) => {
+    e.preventDefault();
+    const email = contact?.enquiryEmail || '';
+    if (email) {
+      navigator.clipboard.writeText(email).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 3000);
+      });
+      // Fallback: still try to open the email client
+      window.location.href = `mailto:${email}?subject=Request%20for%20Quotation`;
+    }
+  };
   return (
     <main className="page-main">
       <PageHero data={{
@@ -106,9 +120,9 @@ export default function Contact() {
                 <p style={{ fontSize: '1.1rem', color: 'var(--text-body)', lineHeight: 1.8, marginBottom: '32px' }}>
                   To ensure the highest accuracy for your project estimation, please send your requirements directly to our engineering team. Attach your 3D CAD models (STEP, IGES) and 2D drawings (PDF) along with material and quantity details.
                 </p>
-                <a href={`mailto:${contact?.enquiryEmail || ''}?subject=Request%20for%20Quotation`} className="btn btn-primary btn-lg" style={{ alignSelf: 'center', borderRadius: '9999px' }}>
-                  Email Our Team &rarr;
-                </a>
+                <button onClick={handleEmailClick} className="btn btn-primary btn-lg" style={{ alignSelf: 'center', borderRadius: '9999px', border: 'none', cursor: 'pointer', transition: 'all 0.3s ease' }}>
+                  {copied ? 'Email Copied! ✓' : 'Email Our Team \u2192'}
+                </button>
                 <p style={{ marginTop: '24px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
                   We respond to all enquiries within <strong>{contact?.responseTime || '24 hours'}</strong>.
                 </p>
