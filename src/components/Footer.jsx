@@ -39,7 +39,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="footer-brand-col">
             <Link to="/" className="footer-logo">
-              <img src="/img/new-logo.png" alt="Top Precision Manufacturing" className="footer-logo-img" />
+              <img src="img/new-logo.png" alt="Top Precision Manufacturing" className="footer-logo-img" />
               <span className="footer-logo-text">
                 <span className="footer-logo-wordmark">TOP PRECISION</span>
                 <span className="footer-logo-sub">Manufacturing Sdn Bhd</span>

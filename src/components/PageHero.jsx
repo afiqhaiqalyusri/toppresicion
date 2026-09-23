@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 export default function PageHero({ data }) {
   if (!data) return null;
   
-  let heroImage = '/img/hero-cnc.jpg';
+  let heroImage = 'img/hero-cnc.jpg';
   if (data.image) {
-    heroImage = data.image.startsWith('/') ? data.image : '/' + data.image;
+    heroImage = data.image.startsWith('/') ? data.image.substring(1) : data.image;
   }
 
   return (

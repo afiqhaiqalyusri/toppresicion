@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Hero({ data }) {
   if (!data) return null;
   
-  let heroImage = '/img/hero-cnc.jpg';
+  let heroImage = 'img/hero-cnc.jpg';
   if (data.heroImage) {
     heroImage = data.heroImage.startsWith('/') ? data.heroImage : '/' + data.heroImage;
   }

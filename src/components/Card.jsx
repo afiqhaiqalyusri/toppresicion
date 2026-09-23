@@ -27,7 +27,7 @@ export default function Card({ data }) {
       >
         <div style={{ width: '100%', aspectRatio: '16/9', overflow: 'hidden', borderBottom: '1px solid var(--border)', flexShrink: 0 }}>
           <img 
-            src={image.startsWith('/') ? image : '/' + image} 
+            src={image.startsWith('/') ? image.substring(1) : image} 
             alt={title} 
             style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease', display: 'block' }} 
           />
@@ -55,7 +55,7 @@ export default function Card({ data }) {
   if (variant === 'sector') {
     return (
       <Link to={link} className={`sector-card reveal ${delayClass}`}>
-        <img src={image.startsWith('/') ? image : '/' + image} alt={title} />
+        <img src={image.startsWith('/') ? image.substring(1) : image} alt={title} />
         <div className="sector-overlay">
           <h3>{title}</h3>
           {description && (

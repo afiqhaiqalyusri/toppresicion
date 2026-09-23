@@ -27,7 +27,7 @@ export default function Capabilities() {
                 return (
                   <Link key={index} to={link} className={`cap-tile reveal ${delayClass}`} style={{ display: 'flex', flexDirection: 'column', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', textDecoration: 'none', boxShadow: '0 4px 15px rgba(0,0,0,0.03)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', aspectRatio: 'auto', height: '100%' }}>
                     <div style={{ width: '100%', aspectRatio: '16/9', overflow: 'hidden', borderBottom: '1px solid var(--border)', flexShrink: 0 }}>
-                      <img src={`/${service.heroImage || service.image || ''}`} alt={service.name || ''} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease', display: 'block' }} />
+                      <img src={(service.heroImage || service.image || '').replace(/^\\/+/, '')} alt={service.name || ''} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease', display: 'block' }} />
                     </div>
                     <div style={{ padding: 'clamp(24px, 5vw, 32px) clamp(16px, 5vw, 24px)', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                       <h3 style={{ fontSize: 'clamp(1.15rem, 4vw, 1.25rem)', fontWeight: 800, color: 'var(--text)', margin: '0 0 12px 0', fontFamily: 'var(--font-heading)', lineHeight: 1.3 }}>{service.name || ''}</h3>

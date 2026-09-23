@@ -57,7 +57,7 @@ export default function Facilities() {
             </div>
 
             <div className="cap-detail-image reveal reveal-d1">
-              <img src="/img/cleanroom.jpg" alt="Top Precision Manufacturing facility floor" />
+              <img src="img/cleanroom.jpg" alt="Top Precision Manufacturing facility floor" />
               <div className="cap-img-badge">
                 <div className="cap-img-badge-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
@@ -216,32 +216,32 @@ export default function Facilities() {
 
             <div className="masonry-gallery">
               <div className="gallery-item item-featured reveal">
-                <img src="/img/hero-cnc.jpg" alt="Factory Floor Wide Shot" />
+                <img src="img/hero-cnc.jpg" alt="Factory Floor Wide Shot" />
                 <div className="gallery-overlay"><div className="gallery-caption">5-Axis Machining Cell</div></div>
               </div>
 
               <div className="gallery-item reveal reveal-d1">
-                <img src="/img/cap-quality.jpg" alt="Metrology Lab" />
+                <img src="img/cap-quality.jpg" alt="Metrology Lab" />
                 <div className="gallery-overlay"><div className="gallery-caption">Metrology &amp; Quality Lab</div></div>
               </div>
 
               <div className="gallery-item reveal reveal-d2">
-                <img src="/img/cleanroom.jpg" alt="Cleanroom Assembly" />
+                <img src="img/cleanroom.jpg" alt="Cleanroom Assembly" />
                 <div className="gallery-overlay"><div className="gallery-caption">ISO Class 7 Cleanroom</div></div>
               </div>
             </div>
 
             <div className="masonry-gallery" style={{ gridTemplateRows: '300px', marginTop: '20px' }}>
               <div className="gallery-item reveal">
-                <img src="/img/precision_turning.jpg" alt="Precision Turning Cell" />
+                <img src="img/precision_turning.jpg" alt="Precision Turning Cell" />
                 <div className="gallery-overlay"><div className="gallery-caption">Precision Turning Cell</div></div>
               </div>
               <div className="gallery-item reveal reveal-d1">
-                <img src="/img/cap-assembly.jpg" alt="Assembly Integration" />
+                <img src="img/cap-assembly.jpg" alt="Assembly Integration" />
                 <div className="gallery-overlay"><div className="gallery-caption">Assembly &amp; Integration</div></div>
               </div>
               <div className="gallery-item reveal reveal-d2">
-                <img src="/img/laser_cutting.jpg" alt="Laser Cutting &amp; Fabrication" />
+                <img src="img/laser_cutting.jpg" alt="Laser Cutting &amp; Fabrication" />
                 <div className="gallery-overlay"><div className="gallery-caption">Laser Cutting &amp; Fabrication</div></div>
               </div>
             </div>

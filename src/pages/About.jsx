@@ -22,7 +22,7 @@ export default function About() {
         <div className="container">
           <div className="intro-split-grid">
             <div className="intro-image-wrap reveal">
-              <img src="/img/cleanroom.jpg" alt="Top Precision assembly facility" />
+              <img src="img/cleanroom.jpg" alt="Top Precision assembly facility" />
             </div>
             <div className="intro-text reveal reveal-d1">
               <span className="section-tag">Our Story</span>
@@ -117,7 +117,7 @@ export default function About() {
               </div>
             </div>
             <div className="intro-image-wrap reveal">
-              <img src="/img/cap-finishing.jpg" alt="Sustainable surface finishing process" />
+              <img src="img/cap-finishing.jpg" alt="Sustainable surface finishing process" />
             </div>
           </div>
         </div>

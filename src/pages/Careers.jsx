@@ -418,7 +418,7 @@ export default function Careers() {
       `}} />
 
       <PageHero data={{
-        image: '/img/hero-cnc.jpg',
+        image: 'img/hero-cnc.jpg',
         title: 'Build Precision With Us',
         breadcrumb: 'Careers',
         description: "At Top Precision, we don't just manufacture parts — we shape the future of advanced technology. We invest in late-model equipment and, most importantly, in our people. Join a team where craftsmanship, safety, and continuous learning are at the core of everything we do.",
@@ -472,7 +472,7 @@ export default function Careers() {
 
             <div className="intro-image-wrap reveal reveal-d1" style={{ position: 'relative', padding: '20px' }}>
               <div style={{ position: 'absolute', top: 0, left: 0, right: '40px', bottom: '40px', background: 'var(--accent-bg)', borderRadius: 'var(--radius-lg)', zIndex: 1 }}></div>
-              <img src="/img/cap-assembly.jpg" alt="Technicians assembling precision parts on the factory floor" style={{ borderRadius: 'var(--radius-lg)', width: '100%', objectFit: 'cover', aspectRatio: '4/5', border: '1px solid var(--border)', boxShadow: 'var(--shadow-lg)', position: 'relative', zIndex: 2, display: 'block' }} />
+              <img src="img/cap-assembly.jpg" alt="Technicians assembling precision parts on the factory floor" style={{ borderRadius: 'var(--radius-lg)', width: '100%', objectFit: 'cover', aspectRatio: '4/5', border: '1px solid var(--border)', boxShadow: 'var(--shadow-lg)', position: 'relative', zIndex: 2, display: 'block' }} />
             </div>
           </div>
 
@@ -656,7 +656,7 @@ export default function Careers() {
       </section>
 
       <section className="cta-band" style={{ position: 'relative', padding: '100px 0', textAlign: 'center', overflow: 'hidden', color: '#fff' }}>
-        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: "url('/img/cap-assembly.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', zIndex: 1 }}></div>
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: "url('img/cap-assembly.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', zIndex: 1 }}></div>
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(135deg, rgba(10, 25, 50, 0.9) 0%, rgba(15, 35, 75, 0.75) 100%)', zIndex: 2 }}></div>
         
         <div className="container cta-band-content" style={{ position: 'relative', zIndex: 3 }}>

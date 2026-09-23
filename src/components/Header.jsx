@@ -56,7 +56,7 @@ export default function Header() {
     }
   };
 
-  let logoSrc = '/img/logo.png';
+  let logoSrc = 'img/logo.png';
   if (media?.logo) {
     logoSrc = media.logo.startsWith('/') ? media.logo : '/' + media.logo;
   }
@@ -91,7 +91,7 @@ export default function Header() {
                     <div className="container">
                       <div className="mega-inner">
                         <div className="mega-preview">
-                          <img src="/img/hero-cnc.jpg" alt="About Top Precision" />
+                          <img src="img/hero-cnc.jpg" alt="About Top Precision" />
                           <div className="mega-preview-caption">Top Precision Manufacturing — Shah Alam, Selangor</div>
                         </div>
                         <div className="mega-links">
@@ -139,7 +139,7 @@ export default function Header() {
                     <div className="container">
                       <div className="mega-inner">
                         <div className="mega-preview">
-                          <img src="/img/hero-cnc.jpg" alt="Manufacturing Services" />
+                          <img src="img/hero-cnc.jpg" alt="Manufacturing Services" />
                           <div className="mega-preview-caption">CNC Machining & Precision Fabrication</div>
                         </div>
                         <div className="mega-links">
@@ -171,7 +171,7 @@ export default function Header() {
                     <div className="container">
                       <div className="mega-inner">
                         <div className="mega-preview">
-                          <img src="/img/cap-quality.jpg" alt="Quality Assurance" />
+                          <img src="img/cap-quality.jpg" alt="Quality Assurance" />
                           <div className="mega-preview-caption">Top Precision Quality Standards</div>
                         </div>
                         <div className="mega-links">
