@@ -17,9 +17,27 @@ function ScrollAndObserver() {
   const location = useLocation();
 
   useEffect(() => {
-    // Scroll to top on route change
-    window.scrollTo(0, 0);
+    const timer = setTimeout(() => {
+      if (location.hash) {
+        const id = location.hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          const headerOffset = 100;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      } else {
+        window.scrollTo(0, 0);
+      }
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [location.pathname, location.hash]);
 
+  useEffect(() => {
     // Give React a moment to render the new DOM elements before observing
     const timer = setTimeout(() => {
       // 1. Scroll Reveal Animation

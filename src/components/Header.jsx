@@ -27,16 +27,45 @@ export default function Header() {
     document.body.style.overflow = nextState ? 'hidden' : '';
   };
 
-  // Close mega menus on outside click
+  // Close mega menus on outside click or menu item click
   useEffect(() => {
-    const handleClickOutside = (e) => {
+    const handleClick = (e) => {
       if (!e.target.closest('.has-mega') && !e.target.closest('.mega-menu-wrapper')) {
         document.querySelectorAll('.has-mega').forEach(el => el.classList.remove('open'));
       }
+      
+      const megaItem = e.target.closest('.mega-item');
+      if (megaItem) {
+        // Temporarily hide the mega menu to remove hover state
+        const wrappers = document.querySelectorAll('.mega-menu-wrapper');
+        wrappers.forEach(w => w.style.display = 'none');
+        setTimeout(() => {
+          wrappers.forEach(w => w.style.display = '');
+        }, 50);
+        
+        // Handle scrolling if we're already on the target route
+        const href = megaItem.getAttribute('href') || '';
+        const [pathPart, hashPart] = href.replace(/^#/, '').split('#');
+        if (location.pathname === pathPart && location.hash.replace('#', '') === (hashPart || '')) {
+          if (hashPart) {
+            const el = document.getElementById(hashPart);
+            if (el) {
+              const headerOffset = 100;
+              const elementPosition = el.getBoundingClientRect().top;
+              window.scrollTo({
+                top: elementPosition + window.pageYOffset - headerOffset,
+                behavior: 'smooth'
+              });
+            }
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }
+      }
     };
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, []);
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, [location.pathname, location.hash]);
 
   const setLang = (lang) => {
     const targetLang = lang === 'zh' ? 'zh-CN' : 'en';
