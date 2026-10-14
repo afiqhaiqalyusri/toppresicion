@@ -121,7 +121,7 @@ export default function Header() {
                       <div className="mega-inner">
                         <div className="mega-preview">
                           <img src="img/hero-cnc.jpg" alt="About Top Precision" />
-                          <div className="mega-preview-caption">Top Precision Manufacturing — Shah Alam, Selangor</div>
+                          <div className="mega-preview-caption">Top Precision Manufacturing — Bayan Lepas, Penang</div>
                         </div>
                         <div className="mega-links">
                           <div className="mega-section-title">About Top Precision Manufacturing</div>
@@ -142,12 +142,6 @@ export default function Header() {
                               <Link to="/about#values" className="mega-item">
                                 <span className="mega-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
                                 <span><span className="mega-item-title">Vision, Mission & Values</span><span className="mega-item-desc">The principles driving every decision at Top Precision.</span></span>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/about#environment" className="mega-item">
-                                <span className="mega-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22V8M5 12c2-4 7-7 7-7s5 3 7 7M3 22h18"/></svg></span>
-                                <span><span className="mega-item-title">Environmental Responsibility</span><span className="mega-item-desc">Our commitment to sustainable and responsible manufacturing practices.</span></span>
                               </Link>
                             </li>
                           </ul>

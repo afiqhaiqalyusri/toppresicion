@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import { contact } from '../content';
 
@@ -103,15 +104,18 @@ export default function Contact() {
                   </svg>
                 </div>
                 <h3 style={{ fontSize: '1.8rem', marginBottom: '16px', fontFamily: 'var(--font-heading)' }}>Ready for a Quote?</h3>
-                <p style={{ fontSize: '1.1rem', color: 'var(--text-body)', lineHeight: 1.8, marginBottom: '32px' }}>
-                  To ensure the highest accuracy for your project estimation, please send your requirements directly to our engineering team. Attach your 3D CAD models (STEP, IGES) and 2D drawings (PDF) along with material and quantity details.
+                <p style={{ fontSize: '1.05rem', color: 'var(--text-body)', lineHeight: 1.8, marginBottom: '28px' }}>
+                  To ensure the highest accuracy for your project estimation, please send your requirements directly to our engineering team. We support precision CNC machining and integrated electro-mechanical box build assembly. Attach your 3D CAD models (STEP, IGES) and 2D drawings (PDF) along with material and quantity details.
                 </p>
                 <a href={`mailto:${contact?.enquiryEmail || ''}?subject=Request%20for%20Quotation`} className="btn btn-primary btn-lg" style={{ alignSelf: 'center', borderRadius: '9999px', transition: 'all 0.3s ease' }}>
                   Email Our Team &rarr;
                 </a>
-                <p style={{ marginTop: '24px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                  We respond to all enquiries within <strong>{contact?.responseTime || '24 hours'}</strong>.
-                </p>
+                <div style={{ marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                  <div>We respond to all RFQs within <strong>{contact?.responseTime || '24 hours'}</strong>.</div>
+                  <div style={{ borderTop: '1px solid var(--border)', paddingTop: '14px', marginTop: '4px' }}>
+                    Looking for career &amp; job opportunities? <Link to="/careers" style={{ color: 'var(--accent)', fontWeight: 600, textDecoration: 'none' }}>View open positions &rarr;</Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

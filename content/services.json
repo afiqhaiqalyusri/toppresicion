@@ -42,45 +42,53 @@
       ],
       "stats": [
         {
+          "icon": "layers",
           "label": "Material",
           "value": "5+"
         },
         {
+          "icon": "target",
           "label": "Tolerance",
-          "value": "Â±0.01"
+          "value": "±0.001 cm"
         },
         {
+          "icon": "dimensions",
           "label": "Maximum Product Size",
-          "value": "950 x 450 x 250"
+          "value": "950 × 450 × 250"
         }
       ],
       "machines": [
         {
           "name": "CNC Milling",
           "brand": "Brother",
-          "model": "SPEEDIO S700Xd1",
-          "axis": "3 axis",
-          "workingArea": "",
-          "tolerance": "0.01",
-          "quantity": 5
+          "model": "SPEEDIO W1000Xd2",
+          "axis": "3-Axis",
+          "tolerance": "0.001 cm",
+          "quantity": 1
         },
         {
           "name": "CNC Milling",
           "brand": "Brother",
-          "model": "SPEEDIO S500Xd1",
-          "axis": "3 axis",
-          "workingArea": "",
-          "tolerance": "0.01",
+          "model": "SPEEDIO S700Xd2",
+          "axis": "3-Axis",
+          "tolerance": "0.001 cm",
+          "quantity": 3
+        },
+        {
+          "name": "CNC Milling",
+          "brand": "Brother",
+          "model": "SPEEDIO S700Xd1",
+          "axis": "3-Axis",
+          "tolerance": "0.001 cm",
           "quantity": 2
         },
         {
           "name": "CNC Milling",
           "brand": "Brother",
-          "model": "SPEEDIO S1000Xd2",
-          "axis": "3  axis",
-          "workingArea": "",
-          "tolerance": "0.01",
-          "quantity": 1
+          "model": "SPEEDIO S500Xd2",
+          "axis": "3-Axis",
+          "tolerance": "0.001 cm",
+          "quantity": 2
         }
       ],
       "relatedCapabilityIds": [
@@ -92,10 +100,11 @@
     {
       "slug": "box-build-assembly",
       "name": "Box Build Assembly",
+      "overviewTitle": "Electro-Mechanical Box Build Assembly",
       "shortDescription": "Integrated assembly of mechanical and electrical components into complete industrial enclosures and equipment assemblies, including AOI (Automated Optical Inspection) machines.",
       "heroImage": "img/hero-cnc.jpg",
-      "overview": "Top Precision Manufacturing provides box build assembly solutions for industrial equipment and electrical enclosure applications, with extensive experience in assembling AOI (Automated Optical Inspection) systems. Our capability supports the integration of fabricated structures, mechanical components, electrical hardware, PCB assemblies, and wiring into complete assemblies based on customer requirements.\n\nOur box build capability brings multiple components and sub-assemblies together within a structured enclosure or equipment assembly. This provides customers with an integrated manufacturing solution for products requiring both mechanical construction and electrical component integration.",
-      "supportingImage": "img/hero-cnc.jpg",
+      "overview": "Top Precision Manufacturing provides integrated box build assembly solutions for industrial equipment and automation systems. Our capabilities include mechanical assembly, electrical wiring, PCBA integration, and AOI (Automated Optical Inspection), delivering reliable and ready-to-use assemblies tailored to customer requirements.",
+      "supportingImage": "img/box_build_assembly.jpg",
       "bottomHeadline": "Integrated Assembly for Complete Equipment",
       "bottomDescription": "Box build assembly combines fabricated structures and individual components into complete equipment or enclosure assemblies. Our capability supports the organized installation of mechanical hardware, PCB assemblies, electrical components, and wiring to create a structured finished unit according to the required configuration.",
       "capabilities": [
@@ -119,21 +128,41 @@
       "materials": [],
       "stats": [
         {
-          "value": "4",
-          "label": "Core Assembly Capabilities"
+          "icon": "package",
+          "value": "4+",
+          "label": "Assembly Specialties"
         },
         {
-          "value": "Multi-Component",
+          "icon": "gear",
+          "value": "100+",
           "label": "Component Integration"
         },
         {
-          "value": "Complete",
-          "label": "Box Build Assembly"
+          "icon": "users",
+          "value": "1",
+          "label": "Integrated Assembly Solution"
+        }
+      ],
+      "features": [
+        {
+          "icon": "layers",
+          "label": "Sheet Metal Enclosure"
+        },
+        {
+          "icon": "gear",
+          "label": "Mechanical Assembly"
+        },
+        {
+          "icon": "circuit",
+          "label": "PCBA Integration"
+        },
+        {
+          "icon": "search",
+          "label": "AOI Inspection"
         }
       ],
       "machines": [],
       "relatedCapabilityIds": [
-        "sheet-metal-box-build",
         "cnc-machining"
       ]
     }

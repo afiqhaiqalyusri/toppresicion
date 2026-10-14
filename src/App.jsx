@@ -11,7 +11,40 @@ import Policies from './pages/Policies';
 import Facilities from './pages/Facilities';
 import ServiceDetail from './pages/ServiceDetail';
 import AdminDashboard from './pages/AdminDashboard';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
+function ScrollProgressBar() {
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalHeight > 0) {
+        const progress = Math.min(Math.max((window.scrollY / totalHeight) * 100, 0), 100);
+        setScrollProgress(progress);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        height: '3px',
+        width: `${scrollProgress}%`,
+        background: 'linear-gradient(90deg, #1a56db 0%, #3b82f6 50%, #60a5fa 100%)',
+        boxShadow: '0 0 10px rgba(59, 130, 246, 0.6)',
+        zIndex: 99999,
+        transition: 'width 0.1s ease-out',
+        pointerEvents: 'none'
+      }}
+    />
+  );
+}
 
 function ScrollAndObserver() {
   const location = useLocation();
@@ -118,6 +151,7 @@ function App() {
         <Route path="/admin/*" element={<AdminDashboard />} />
         <Route path="*" element={
           <>
+            <ScrollProgressBar />
             <ScrollAndObserver />
             <Header />
             <Routes>

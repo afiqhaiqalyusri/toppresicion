@@ -185,32 +185,47 @@ p {
   clip: rect(0, 0, 0, 0);
 }
 
-/* ---------- SCROLL REVEAL ---------- */
+/* ---------- SCROLL REVEAL & DYNAMIC ANIMATIONS ---------- */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(32px) scale(0.985);
   transition:
-    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
 .reveal.revealed {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
-.reveal-d1 {
-  transition-delay: 0.1s;
+.reveal-d1 { transition-delay: 0.08s; }
+.reveal-d2 { transition-delay: 0.16s; }
+.reveal-d3 { transition-delay: 0.24s; }
+.reveal-d4 { transition-delay: 0.32s; }
+.reveal-d5 { transition-delay: 0.4s; }
+
+@keyframes beaconPulseGreen {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
-.reveal-d2 {
-  transition-delay: 0.2s;
+
+@keyframes beaconPulseBlue {
+  0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(59, 130, 246, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
 }
-.reveal-d3 {
-  transition-delay: 0.3s;
+
+@keyframes heroSlowZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.06); }
 }
-.reveal-d4 {
-  transition-delay: 0.4s;
+
+@keyframes pinFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 .btn {
@@ -2458,6 +2473,8 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  animation: heroSlowZoom 20s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+  will-change: transform;
 }
 
 .page-hero-overlay {
@@ -5879,7 +5896,7 @@ div.home-capabilities-container div.cap-grid .cap-tile {
    ABOUT PAGE COMPONENTS
    ============================================================ */
 
-/* Value / Mission / Vision Card */
+/* Value / Mission / Vision Card (Legacy Fallback) */
 .value-card {
   background: #fff;
   padding: clamp(16px, 4vw, 40px);
@@ -5935,7 +5952,6 @@ div.home-capabilities-container div.cap-grid .cap-tile {
   font-size: clamp(0.8rem, 3vw, 0.92rem);
 }
 
-/* Core Values Grid */
 .values-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -5943,22 +5959,354 @@ div.home-capabilities-container div.cap-grid .cap-tile {
   margin-top: 32px;
 }
 
+/* ============================================================
+   EDITORIAL PHILOSOPHY SECTION (IMAGE-RICH & HUMAN DESIGN)
+   ============================================================ */
+
+.editorial-philosophy-section {
+  padding: 96px 0;
+  background: #ffffff;
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+
+/* --- PART 1: VISION & MISSION SPLIT SHOWCASE --- */
+.philosophy-showcase-split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 72px;
+}
+
+.philosophy-editorial-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.philosophy-editorial-text .section-tag {
+  margin-bottom: 14px;
+}
+
+.philosophy-editorial-text h2 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+/* Dual Directive Blocks (Left side) */
+.editorial-directive-block {
+  padding: 24px 0;
+}
+
+.editorial-directive-block:first-of-type {
+  border-bottom: 1px solid var(--border);
+  padding-top: 0;
+}
+
+.editorial-directive-block:last-of-type {
+  padding-bottom: 28px;
+}
+
+.editorial-directive-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.editorial-directive-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.editorial-directive-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.editorial-directive-quote {
+  font-size: clamp(1.05rem, 1.8vw, 1.18rem);
+  line-height: 1.7;
+  color: var(--text-body);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Key Highlights Row */
+.editorial-proof-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.editorial-proof-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-body);
+}
+
+.editorial-proof-item i {
+  color: var(--accent);
+  font-size: 1.05rem;
+}
+
+/* Photo Composite Feature (Right side) */
+.philosophy-photo-composite {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+  aspect-ratio: 4/3.8;
+  background: var(--bg-3);
+}
+
+.philosophy-photo-composite img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.philosophy-photo-composite:hover img {
+  transform: scale(1.04);
+}
+
+.composite-badge-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.composite-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.composite-badge-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.composite-badge-sub {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.composite-badge-pin {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* --- PART 2: EDITORIAL CORE VALUES (OPEN, NO BOXES, NO PHOTOS) --- */
+.editorial-values-block {
+  margin-top: 36px;
+  padding-top: 56px;
+  border-top: 1px solid var(--border);
+}
+
+.editorial-values-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.editorial-values-title {
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.editorial-values-lead {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Open 4-Column Grid: No Box, No Background, Pure Architectural Typography */
+.editorial-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+}
+
+.editorial-value-col {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--t);
+}
+
+.editorial-value-col:hover {
+  transform: translateY(-4px);
+}
+
+.editorial-val-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.editorial-val-num {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #cbd5e1;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  transition: color var(--t);
+}
+
+.editorial-value-col:hover .editorial-val-num {
+  color: var(--accent);
+}
+
+.editorial-val-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: background-color var(--t), color var(--t), transform var(--t);
+}
+
+.editorial-value-col:hover .editorial-val-icon {
+  background: var(--accent);
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.editorial-val-accent-line {
+  width: 32px;
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: 16px;
+  transition: width var(--t) var(--ease);
+}
+
+.editorial-value-col:hover .editorial-val-accent-line {
+  width: 54px;
+}
+
+.editorial-val-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.editorial-val-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0 0 10px 0;
+  letter-spacing: -0.01em;
+}
+
+.editorial-val-desc {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-body);
+  margin: 0;
+}
+
+/* Responsive Rules */
+@media (max-width: 992px) {
+  .philosophy-showcase-split {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .philosophy-photo-composite {
+    max-width: 580px;
+    margin: 0 auto;
+    width: 100%;
+    aspect-ratio: 16/10;
+  }
+  .editorial-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .editorial-values-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .editorial-values-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .editorial-directive-block {
+    padding: 18px 16px;
+  }
+  .editorial-proof-row {
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    font-size: 0.85rem;
+  }
+}
+
 /* Timeline specific text alignment */
 .timeline-text.align-right {
   text-align: right;
 }
 
-/* Environmental Section */
-.intro-split-grid.wide-gap {
-  gap: 48px;
-}
-
-.env-body-text {
-  margin-top: 20px;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: var(--text-body);
-}
 
 /* ============================================================
    GOOGLE TRANSLATE OVERRIDES

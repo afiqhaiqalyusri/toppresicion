@@ -3,8 +3,9 @@ import PageHero from '../components/PageHero';
 import { company, services } from '../content';
 
 export default function Facilities() {
-  const facilitySize = company?.facilitySize || '45,000';
-  const cncMachines = company?.cncMachines || '60';
+  const facilitySize = company?.facilitySize || '10,000+';
+  const cncMachines = company?.cncMachines || '8';
+  const location = company?.location || 'Bayan Lepas Free Industrial Zone (FIZ), Penang, Malaysia';
 
   let allMachines = [];
   if (services && services.length > 0) {
@@ -19,11 +20,10 @@ export default function Facilities() {
 
   if (allMachines.length === 0) {
     allMachines = [
-      { name: 'Vertical Machining Center', brand: 'Mazak', model: 'Variaxis i-700', axis: '5-Axis', workingArea: '850 x 700 x 600', tolerance: '±0.005mm', quantity: 5 },
-      { name: 'Vertical Machining Center', brand: 'DMG Mori', model: 'CMX 1100 V', axis: '3-Axis', workingArea: '1100 x 560 x 510', tolerance: '±0.008mm', quantity: 12 },
-      { name: 'CNC Turn-Mill Center', brand: 'Okuma', model: 'Multus B250II', axis: '9-Axis', workingArea: 'Ø600 x 750 (Z)', tolerance: '±0.005mm', quantity: 8 },
-      { name: 'Swiss-Type Auto Lathe', brand: 'Star Micronics', model: 'SR-20R IV', axis: '7-Axis', workingArea: 'Ø20 x 205 (Z)', tolerance: '±0.002mm', quantity: 4 },
-      { name: 'Coordinate Measuring Machine', brand: 'Zeiss', model: 'Contura 7/10/6', axis: 'N/A', workingArea: '700 x 1000 x 600', tolerance: '±0.0015mm', quantity: 2 }
+      { name: 'CNC Milling', brand: 'Brother', model: 'SPEEDIO W1000Xd2', axis: '3-Axis', tolerance: '0.001 cm', quantity: 1 },
+      { name: 'CNC Milling', brand: 'Brother', model: 'SPEEDIO S700Xd2', axis: '3-Axis', tolerance: '0.001 cm', quantity: 3 },
+      { name: 'CNC Milling', brand: 'Brother', model: 'SPEEDIO S700Xd1', axis: '3-Axis', tolerance: '0.001 cm', quantity: 2 },
+      { name: 'CNC Milling', brand: 'Brother', model: 'SPEEDIO S500Xd2', axis: '3-Axis', tolerance: '0.001 cm', quantity: 2 }
     ];
   }
 
@@ -41,18 +41,17 @@ export default function Facilities() {
             <div className="cap-detail-text reveal">
               <span className="cap-service-tag">Our Factory</span>
               <h2>Built for <span className="accent">Scale &amp; Speed</span></h2>
-              <p>Our {facilitySize} sq ft climate-controlled facility in Shah Alam, Selangor houses over {cncMachines} advanced CNC machining centres, a dedicated quality laboratory, surface treatment bays, and a cleanroom-ready assembly area.</p>
+              <p>Our {facilitySize} sq ft climate-controlled facility in {location} houses {cncMachines} Brother SPEEDIO high-speed CNC machining centres, a dedicated quality inspection laboratory, and integrated box build assembly cells.</p>
               <ul className="detail-list">
-                <li><strong>Milling:</strong> 3-Axis &amp; 4-Axis VMCs, 5-Axis VMCs</li>
-                <li><strong>Turning:</strong> CNC Lathes with Live Tooling, Swiss-type Auto Lathes</li>
-                <li><strong>Fabrication:</strong> Fiber Lasers, CNC Press Brakes</li>
-                <li><strong>Metrology:</strong> CMMs, Optical Profilers</li>
+                <li><strong>CNC Milling:</strong> Brother SPEEDIO 3-Axis High-Speed Machining Centers</li>
+                <li><strong>Assembly:</strong> Electro-Mechanical Box Build &amp; PCBA Integration</li>
+                <li><strong>Quality &amp; Inspection:</strong> Coordinate Measuring Machine (CMM) &amp; Automated Optical Inspection (AOI)</li>
               </ul>
               <div className="cap-spec-pills">
                 <span className="cap-spec-pill">{facilitySize} sq ft</span>
-                <span className="cap-spec-pill">{cncMachines}+ Machines</span>
-                <span className="cap-spec-pill">Shah Alam, Selangor</span>
-                <span className="cap-spec-pill">ISO Class 7 Cleanroom</span>
+                <span className="cap-spec-pill">{cncMachines} CNC Machines</span>
+                <span className="cap-spec-pill">Bayan Lepas FIZ, Penang</span>
+                <span className="cap-spec-pill">±0.001 cm Tolerance</span>
               </div>
             </div>
 
@@ -64,7 +63,7 @@ export default function Facilities() {
                 </div>
                 <div className="cap-img-badge-text">
                   <strong>{facilitySize} sq ft Facility</strong>
-                  <span>Shah Alam, Selangor</span>
+                  <span>Bayan Lepas FIZ, Penang</span>
                 </div>
               </div>
             </div>
@@ -107,7 +106,7 @@ export default function Facilities() {
             <div style={{ marginBottom: '50px', textAlign: 'center' }} className="reveal">
               <span className="section-tag">Equipment List</span>
               <h2 style={{ marginTop: '12px' }}>Equipment <span className="accent">Showcase</span></h2>
-              <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', maxWidth: '680px', margin: '16px auto 0', lineHeight: 1.6 }}>Our continually updated machine park ensures we have the right spindle for every job, from micro-turning to large-format 5-axis milling.</p>
+              <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', maxWidth: '680px', margin: '16px auto 0', lineHeight: 1.6 }}>Our Brother SPEEDIO high-speed machining fleet and precision equipment deliver repeatable accuracy with tolerances up to ±0.001 cm.</p>
             </div>
 
             <style dangerouslySetInnerHTML={{__html: `
@@ -158,10 +157,12 @@ export default function Facilities() {
                         <span className="machine-spec-label">Accuracy</span>
                         <span className="machine-spec-value" style={{ color: 'var(--accent)' }}>{machine.tolerance || '-'}</span>
                       </div>
-                      <div className="machine-spec-item" style={{ gridColumn: 'span 2' }}>
-                        <span className="machine-spec-label">Working Area (mm)</span>
-                        <span className="machine-spec-value">{machine.workingArea || '-'}</span>
-                      </div>
+                      {machine.workingArea ? (
+                        <div className="machine-spec-item" style={{ gridColumn: 'span 2' }}>
+                          <span className="machine-spec-label">Working Area (mm)</span>
+                          <span className="machine-spec-value">{machine.workingArea}</span>
+                        </div>
+                      ) : null}
                     </div>
                   </div>
                 );
@@ -217,7 +218,7 @@ export default function Facilities() {
             <div className="masonry-gallery">
               <div className="gallery-item item-featured reveal">
                 <img src="img/hero-cnc.jpg" alt="Factory Floor Wide Shot" />
-                <div className="gallery-overlay"><div className="gallery-caption">5-Axis Machining Cell</div></div>
+                <div className="gallery-overlay"><div className="gallery-caption">High-Speed CNC Milling Fleet</div></div>
               </div>
 
               <div className="gallery-item reveal reveal-d1">
@@ -227,7 +228,7 @@ export default function Facilities() {
 
               <div className="gallery-item reveal reveal-d2">
                 <img src="img/cleanroom.jpg" alt="Cleanroom Assembly" />
-                <div className="gallery-overlay"><div className="gallery-caption">ISO Class 7 Cleanroom</div></div>
+                <div className="gallery-overlay"><div className="gallery-caption">Cleanroom Assembly</div></div>
               </div>
             </div>
 
