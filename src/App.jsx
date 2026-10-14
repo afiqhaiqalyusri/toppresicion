@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -144,28 +144,6 @@ function ScrollAndObserver() {
   return null;
 }
 
-function NotFound() {
-  return (
-    <main className="page-main" style={{ padding: '120px 20px', textAlign: 'center', minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: '#eff6ff', color: '#1a56db', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', fontSize: '1.8rem', fontWeight: 800 }}>
-        !
-      </div>
-      <h1 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--text)', marginBottom: '12px', fontFamily: 'var(--font-heading)' }}>Page Not Found</h1>
-      <p style={{ maxWidth: '480px', color: 'var(--text-body)', lineHeight: 1.6, marginBottom: '28px', fontSize: '1.05rem' }}>
-        The page or manufacturing capability you are looking for does not exist or may have been updated.
-      </p>
-      <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center' }}>
-        <Link to="/" className="btn btn-primary" style={{ padding: '12px 24px', borderRadius: '8px' }}>
-          Back to Homepage
-        </Link>
-        <Link to="/capabilities" className="btn btn-outline" style={{ padding: '12px 24px', borderRadius: '8px' }}>
-          Explore Capabilities
-        </Link>
-      </div>
-    </main>
-  );
-}
-
 function App() {
   return (
     <Router>
@@ -185,9 +163,7 @@ function App() {
               <Route path="/certificates" element={<Certificates />} />
               <Route path="/policies" element={<Policies />} />
               <Route path="/facilities" element={<Facilities />} />
-              <Route path="/404" element={<NotFound />} />
               <Route path="/:slug" element={<ServiceDetail />} />
-              <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
           </>

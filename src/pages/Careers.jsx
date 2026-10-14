@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import PageHero from '../components/PageHero';
 import { jobs, contact } from '../content';
 
 export default function Careers() {
@@ -8,22 +9,23 @@ export default function Careers() {
   const [selectedJob, setSelectedJob] = useState(null);
 
   const filteredJobs = useMemo(() => {
-    return jobs.filter(job => {
+    return (jobs || []).filter(job => {
       const title = (job.title || '').toLowerCase();
       const desc = (job.description || '').toLowerCase();
       const department = (job.department || '').toLowerCase();
       
       const query = searchQuery.toLowerCase().trim();
-      const matchesSearch = title.includes(query) || desc.includes(query);
+      const matchesSearch = !query || title.includes(query) || desc.includes(query);
       
       let selectedDeptRaw = deptFilter;
       let matchesDept = false;
       if (selectedDeptRaw === 'all') {
         matchesDept = true;
       } else {
-        if (selectedDeptRaw === 'machining' && (department.includes('machining') || department.includes('production') || department.includes('manufacturing'))) matchesDept = true;
+        if (selectedDeptRaw === 'machining' && (department.includes('machining') || department.includes('production') || department.includes('manufacturing') || department.includes('assembly'))) matchesDept = true;
         if (selectedDeptRaw === 'quality' && (department.includes('quality') || department.includes('qc') || department.includes('qa'))) matchesDept = true;
-        if (selectedDeptRaw === 'internship' && (department.includes('various') || department.includes('intern') || department.includes('sales') || department.includes('admin'))) matchesDept = true;
+        if (selectedDeptRaw === 'internship' && (department.includes('various') || department.includes('intern') || department.includes('student'))) matchesDept = true;
+        if (selectedDeptRaw === 'sales' && (department.includes('sales') || department.includes('admin'))) matchesDept = true;
       }
       
       return matchesSearch && matchesDept;
@@ -955,7 +957,7 @@ export default function Careers() {
             </div>
             <select id="job-dept-filter" className="job-dept-filter-select" value={deptFilter} onChange={(e) => setDeptFilter(e.target.value)}>
               <option value="all">All Departments</option>
-              <option value="machining">Manufacturing &amp; Machining</option>
+              <option value="machining">Manufacturing &amp; Assembly</option>
               <option value="quality">Quality Control &amp; Assurance</option>
               <option value="internship">Internship &amp; Various</option>
             </select>
@@ -966,8 +968,8 @@ export default function Careers() {
               filteredJobs.map((job, idx) => {
                 let tagClass = '';
                 const dept = (job.department || '').toLowerCase();
-                if (dept.includes('machining') || dept.includes('production') || dept.includes('manufacturing')) tagClass = 'job-tag-machining';
-                else if (dept.includes('quality') || dept.includes('qc')) tagClass = 'job-tag-quality';
+                if (dept.includes('machin') || dept.includes('product') || dept.includes('manufactur') || dept.includes('assembl')) tagClass = 'job-tag-machining';
+                else if (dept.includes('qualit') || dept.includes('qc') || dept.includes('qa')) tagClass = 'job-tag-quality';
                 else tagClass = 'job-tag-sales';
 
                 return (

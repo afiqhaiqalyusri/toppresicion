@@ -18,9 +18,9 @@
     "image": "img/assembly-floor-workshop.jpg"
   },
   "homeCapabilities": {
-    "tagline": "What We Do",
+    "tagline": "What We Do ",
     "title": "Our Manufacturing <span class=\"accent\">Services</span>",
-    "description": "Comprehensive precision manufacturing combining high-speed CNC machining and turnkey electro-mechanical box build assembly."
+    "description": "CNC Machining: Precision machining of custom components and complex parts using CNC milling and turning processes.\n\nSheet Metal Fabrication: Fabrication of industrial enclosures, panels, chassis, brackets, and custom sheet metal components.\n\nBox Build Assembly: Integration of fabricated structures, mechanical components, electrical hardware, PCB assemblies, and wiring into complete assemblies."
   },
   "whyChooseUs": {
     "tagline": "Why Top Precision",

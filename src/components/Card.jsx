@@ -53,9 +53,8 @@ export default function Card({ data }) {
   }
 
   if (variant === 'sector') {
-    const hasValidLink = rawLink && rawLink !== '#';
-    const content = (
-      <>
+    return (
+      <Link to={link} className={`sector-card reveal ${delayClass}`}>
         <img src={image.startsWith('/') ? image.substring(1) : image} alt={title} />
         <div className="sector-overlay">
           <h3>{title}</h3>
@@ -63,21 +62,7 @@ export default function Card({ data }) {
             <p>{description}</p>
           )}
         </div>
-      </>
-    );
-
-    if (hasValidLink) {
-      return (
-        <Link to={link} className={`sector-card reveal ${delayClass}`}>
-          {content}
-        </Link>
-      );
-    }
-
-    return (
-      <div className={`sector-card reveal ${delayClass}`} style={{ cursor: 'default' }}>
-        {content}
-      </div>
+      </Link>
     );
   }
 

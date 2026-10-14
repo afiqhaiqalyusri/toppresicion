@@ -294,7 +294,7 @@ export default function Home() {
           <div className="cta-headline-solid">{homeCta?.headlineSolid || ''}</div>
           <p className="cta-body">{homeCta?.body || ''}</p>
           <div className="cta-actions">
-            <Link to={`/${(homeCta?.primaryBtnLink || 'contact').replace('.html', '').replace(/^\/+/, '')}`} className="btn btn-primary btn-lg">{homeCta?.primaryBtnText || 'Request a Quote'}</Link>
+            <Link to={`/${(homeCta?.primaryBtnLink || '').replace('.html', '')}`} className="btn btn-primary btn-lg">{homeCta?.primaryBtnText || ''}</Link>
             <a href={(homeCta?.secondaryBtnLink || '').replace('.html', '')} className="btn btn-outline-white btn-lg">{homeCta?.secondaryBtnText || ''}</a>
           </div>
         </div>

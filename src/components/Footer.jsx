@@ -149,8 +149,8 @@ export default function Footer() {
           <p>&copy; {currentYear} {company?.name || ''} ({company?.regNumber || ''}). All rights reserved.</p>
           <div className="footer-bottom-right" style={{display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap'}}>
             <nav className="footer-bottom-links">
-              <Link to="/policies">Privacy Policy</Link>
-              <Link to="/policies">Terms of Use</Link>
+              <Link to="#">Privacy Policy</Link>
+              <Link to="#">Terms of Use</Link>
             </nav>
             <div className="lang-toggle" id="lang-toggle-footer">
               <button className="lang-btn active" data-lang="en" onClick={() => setLang('en')}>EN</button>
