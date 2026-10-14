@@ -56,7 +56,7 @@ export default function Facilities() {
             </div>
 
             <div className="cap-detail-image reveal reveal-d1">
-              <img src="img/cleanroom.jpg" alt="Top Precision Manufacturing facility floor" />
+              <img src="img/assembly-floor-workshop.jpg" alt="Top Precision Manufacturing assembly floor" />
               <div className="cap-img-badge">
                 <div className="cap-img-badge-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
@@ -217,33 +217,33 @@ export default function Facilities() {
 
             <div className="masonry-gallery">
               <div className="gallery-item item-featured reveal">
-                <img src="img/hero-cnc.jpg" alt="Factory Floor Wide Shot" />
-                <div className="gallery-overlay"><div className="gallery-caption">High-Speed CNC Milling Fleet</div></div>
+                <img src="img/top-precision-factory-entrance.jpg" alt="Top Precision Bayan Lepas Facility Entrance & Logistics Bay" />
+                <div className="gallery-overlay"><div className="gallery-caption">Bayan Lepas Facility Entrance &amp; Logistics Dock</div></div>
               </div>
 
               <div className="gallery-item reveal reveal-d1">
-                <img src="img/cap-quality.jpg" alt="Metrology Lab" />
-                <div className="gallery-overlay"><div className="gallery-caption">Metrology &amp; Quality Lab</div></div>
+                <img src="img/hero-cnc.jpg" alt="Brother SPEEDIO High-Speed CNC Machining Fleet" />
+                <div className="gallery-overlay"><div className="gallery-caption">High-Speed CNC Machining Fleet</div></div>
               </div>
 
               <div className="gallery-item reveal reveal-d2">
-                <img src="img/cleanroom.jpg" alt="Cleanroom Assembly" />
-                <div className="gallery-overlay"><div className="gallery-caption">Cleanroom Assembly</div></div>
+                <img src="img/engineering-dfm-cad-design.jpg" alt="Design for Manufacturability (DFM) & CAD/CAM Review" />
+                <div className="gallery-overlay"><div className="gallery-caption">CAD / DFM Engineering Review</div></div>
               </div>
             </div>
 
             <div className="masonry-gallery" style={{ gridTemplateRows: '300px', marginTop: '20px' }}>
               <div className="gallery-item reveal">
-                <img src="img/precision_turning.jpg" alt="Precision Turning Cell" />
-                <div className="gallery-overlay"><div className="gallery-caption">Precision Turning Cell</div></div>
+                <img src="img/box-build-aoi-assembly.jpg" alt="AOI Optical Inspection & Assembly Cell" />
+                <div className="gallery-overlay"><div className="gallery-caption">Automated Optical Inspection (AOI) Cell</div></div>
               </div>
               <div className="gallery-item reveal reveal-d1">
-                <img src="img/cap-assembly.jpg" alt="Assembly Integration" />
-                <div className="gallery-overlay"><div className="gallery-caption">Assembly &amp; Integration</div></div>
+                <img src="img/electrical-panel-wiring.jpg" alt="Precision Electrical Panel & Enclosure Wiring" />
+                <div className="gallery-overlay"><div className="gallery-caption">Precision Electrical Panel Wiring</div></div>
               </div>
               <div className="gallery-item reveal reveal-d2">
-                <img src="img/laser_cutting.jpg" alt="Laser Cutting &amp; Fabrication" />
-                <div className="gallery-overlay"><div className="gallery-caption">Laser Cutting &amp; Fabrication</div></div>
+                <img src="img/cap-quality.jpg" alt="Metrology & Quality Assurance Laboratory" />
+                <div className="gallery-overlay"><div className="gallery-caption">Metrology &amp; Quality Lab</div></div>
               </div>
             </div>
 

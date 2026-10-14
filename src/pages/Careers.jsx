@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import PageHero from '../components/PageHero';
-import { jobs } from '../content';
+import { jobs, contact } from '../content';
 
 export default function Careers() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -736,7 +735,7 @@ export default function Careers() {
                 background: 'var(--bg-2)'
               }}>
                 <img
-                  src="img/cap-assembly.jpg"
+                  src="img/assembly-floor-workshop.jpg"
                   alt="Technicians assembling precision parts on the factory floor"
                   style={{
                     width: '100%',
@@ -1002,7 +1001,7 @@ export default function Careers() {
                       </div>
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', flexShrink: 0 }}>
-                      <a href={`mailto:careers@topprecision.com.my?subject=Job%20Application%20-%20${encodeURIComponent(job.title || '')}`} className="btn btn-outline" style={{ whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
+                      <a href={`mailto:${contact?.enquiryEmail || 'topprecision@gmail.com'}?subject=Job%20Application%20-%20${encodeURIComponent(job.title || '')}`} className="btn btn-outline" style={{ whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
                         Apply Now
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                       </a>
@@ -1034,7 +1033,7 @@ export default function Careers() {
             We are always on the lookout for talented machinists, engineers, and manufacturing professionals. Send us your resume and we will contact you when an opportunity arises.
           </p>
           <div className="cta-actions">
-            <a href="mailto:careers@topprecision.com.my?subject=General%20Application" className="btn btn-primary btn-header-cta" style={{ borderRadius: '9999px', background: '#fff', color: '#000', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+            <a href={`mailto:${contact?.enquiryEmail || 'topprecision@gmail.com'}?subject=General%20Application`} className="btn btn-primary btn-header-cta" style={{ borderRadius: '9999px', background: '#fff', color: '#000', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               Send General Application
             </a>
@@ -1067,7 +1066,18 @@ export default function Careers() {
               <p id="modal-desc" style={{ fontSize: '1rem', color: 'var(--text-body)', lineHeight: 1.7, marginBottom: '32px' }}>{selectedJob.description}</p>
               
               <h4 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text)', marginBottom: '12px' }}>Requirements</h4>
-              <p id="modal-req" style={{ fontSize: '1rem', color: 'var(--text-body)', lineHeight: 1.7, marginBottom: '40px', whiteSpace: 'pre-wrap' }}>{selectedJob.requirements || 'Requirements not specified.'}</p>
+              <p id="modal-req" style={{ fontSize: '1rem', color: 'var(--text-body)', lineHeight: 1.7, marginBottom: '32px', whiteSpace: 'pre-wrap' }}>{selectedJob.requirements || 'Requirements not specified.'}</p>
+
+              <div style={{ borderTop: '1px solid var(--border)', paddingTop: '20px', display: 'flex', justifyContent: 'flex-end' }}>
+                <a 
+                  href={`mailto:${contact?.enquiryEmail || 'topprecision@gmail.com'}?subject=Job%20Application%20-%20${encodeURIComponent(selectedJob.title || '')}`}
+                  className="btn btn-primary"
+                  style={{ borderRadius: '9999px', padding: '12px 28px', display: 'inline-flex', alignItems: 'center', gap: '8px', fontWeight: 700 }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Apply via Email
+                </a>
+              </div>
             </div>
           </div>
         )}

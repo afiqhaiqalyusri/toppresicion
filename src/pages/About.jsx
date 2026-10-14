@@ -10,13 +10,16 @@ export default function About() {
            ABOUT PAGE: DYNAMIC INTERACTIONS & ADVANCED RESPONSIVENESS
            ============================================================ */
         
-        /* 1. Intro Story Image & Floating Badge */
+        /* 1. Intro Story Image (Clean & Framed) */
+        .intro-image-column {
+          display: flex;
+          flex-direction: column;
+        }
         .intro-image-wrap {
-          position: relative;
           overflow: hidden;
-          border-radius: 16px;
+          border-radius: var(--radius-md, 8px);
           border: 1px solid var(--border);
-          box-shadow: 0 12px 35px -8px rgba(15, 23, 42, 0.08);
+          box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
           background: var(--bg-2);
         }
         .intro-image-wrap img {
@@ -25,95 +28,214 @@ export default function About() {
           min-height: 380px;
           object-fit: cover;
           display: block;
-          transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .intro-image-wrap:hover img {
-          transform: scale(1.04);
+
+        /* 2. Philosophy Showcase: Vision & Mission (Architectural Balance) */
+        .philosophy-showcase-split {
+          display: grid;
+          grid-template-columns: 1.08fr 0.92fr;
+          gap: 40px;
+          align-items: stretch;
+          margin-bottom: 28px;
         }
-        .story-floating-badge {
-          position: absolute;
-          bottom: 24px;
-          left: 24px;
-          background: rgba(15, 23, 42, 0.88);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-          border: 1px solid rgba(255, 255, 255, 0.18);
-          padding: 12px 18px;
-          border-radius: 14px;
-          display: inline-flex;
+        .philosophy-editorial-text {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+        .philosophy-editorial-text .section-tag {
+          margin-bottom: 12px;
+        }
+        .philosophy-editorial-text h2 {
+          font-size: clamp(2rem, 3.2vw, 2.5rem);
+          font-weight: 800;
+          color: var(--text);
+          letter-spacing: -0.02em;
+          line-height: 1.2;
+          margin-bottom: 20px;
+        }
+        .philosophy-unified-panel {
+          background: #ffffff;
+          border: 1px solid var(--border);
+          border-radius: var(--radius-md, 8px);
+          box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+        .philosophy-panel-row {
+          padding: 24px 28px;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          transition: background-color 0.25s ease;
+        }
+        .philosophy-panel-row:hover {
+          background: #fbfcfe;
+        }
+        .philosophy-panel-divider {
+          height: 1px;
+          background: var(--border);
+          width: 100%;
+        }
+        .panel-row-header {
+          display: flex;
           align-items: center;
+          gap: 14px;
+          margin-bottom: 10px;
+        }
+        .panel-badge {
+          font-family: var(--font-heading);
+          font-size: 0.8rem;
+          font-weight: 800;
+          color: var(--accent);
+          background: var(--accent-bg);
+          width: 32px;
+          height: 32px;
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          border: 1px solid rgba(26, 86, 219, 0.15);
+        }
+        .panel-badge.panel-badge-accent {
+          color: var(--accent-dark);
+          background: rgba(30, 58, 138, 0.07);
+          border-color: rgba(30, 58, 138, 0.18);
+        }
+        .panel-badge-titles {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+        }
+        .panel-title {
+          font-size: 0.8rem;
+          font-weight: 800;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: var(--text);
+          line-height: 1.2;
+        }
+        .panel-subtitle {
+          font-size: 0.72rem;
+          color: var(--text-muted);
+          letter-spacing: 0.01em;
+        }
+        .panel-text {
+          font-size: 1.02rem;
+          line-height: 1.68;
+          color: var(--text-body);
+          font-weight: 450;
+          margin: 0;
+        }
+
+        /* 3. Industrial Photo Column (Equal Height Parity & Clean Alignment) */
+        .philosophy-photo-column {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+        .philosophy-photo-composite {
+          position: relative;
+          border-radius: var(--radius-md, 8px);
+          overflow: hidden;
+          border: 1px solid var(--border);
+          box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+          background: var(--bg-3);
+          flex: 1;
+          min-height: 300px;
+        }
+        .philosophy-photo-composite img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+        .philosophy-photo-caption {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 4px 0;
+          font-size: 0.8rem;
+          color: var(--text-muted);
           gap: 12px;
-          color: #ffffff;
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-          transition: transform 0.35s ease, background 0.35s ease;
-          z-index: 2;
-        }
-        .intro-image-wrap:hover .story-floating-badge {
-          transform: translateY(-4px);
-          background: rgba(15, 23, 42, 0.96);
-        }
-        .story-beacon-dot {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background: #10b981;
-          box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-          animation: beaconPulseGreen 2s infinite;
           flex-shrink: 0;
         }
-        .story-floating-badge strong {
-          display: block;
+        .photo-caption-main {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          color: var(--text-body);
+          font-weight: 600;
+        }
+        .photo-caption-main i {
+          color: var(--accent);
+          font-size: 0.95rem;
+        }
+        .photo-caption-sub {
+          font-size: 0.75rem;
+          color: var(--text-muted);
+          letter-spacing: 0.02em;
+        }
+
+        /* 4. Full-Width Plinth Benchmarks Bar */
+        .philosophy-specs-bar {
+          display: grid;
+          grid-template-columns: 1fr auto 1fr auto 1fr;
+          align-items: center;
+          gap: 24px;
+          padding: 20px 32px;
+          background: #ffffff;
+          border: 1px solid var(--border);
+          border-radius: var(--radius-md, 8px);
+          box-shadow: 0 2px 12px rgba(15, 23, 42, 0.03);
+          margin-top: 0;
+        }
+        .spec-metric-item {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+        }
+        .spec-metric-icon {
+          width: 42px;
+          height: 42px;
+          border-radius: 8px;
+          background: var(--accent-bg);
+          color: var(--accent);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.25rem;
+          flex-shrink: 0;
+        }
+        .spec-metric-info {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+        }
+        .spec-metric-label {
+          font-size: 0.68rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: var(--text-muted);
+        }
+        .spec-metric-value {
           font-size: 0.92rem;
           font-weight: 700;
-          line-height: 1.25;
-          color: #ffffff;
+          color: var(--text);
+          line-height: 1.3;
         }
-        .story-floating-badge span {
-          font-size: 0.78rem;
-          color: #94a3b8;
-          display: block;
-        }
-
-        /* 2. Directive Blocks Hover Interactions */
-        .editorial-directive-block {
-          background: #f8fafc;
-          border: 1px solid rgba(226, 232, 240, 0.85);
-          border-left: 3px solid #cbd5e1;
-          border-radius: 14px;
-          padding: 22px 24px;
-          margin-bottom: 20px;
-          transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .editorial-directive-block:hover {
-          transform: translateX(6px);
-          background: #f0f7ff;
-          border-left-color: var(--accent);
-          border-color: #bfdbfe;
-          box-shadow: 0 12px 30px -10px rgba(26, 86, 219, 0.12);
-        }
-        .editorial-directive-icon {
-          transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease, color 0.3s ease;
-        }
-        .editorial-directive-block:hover .editorial-directive-icon {
-          transform: scale(1.15) rotate(6deg);
-          background: var(--accent);
-          color: #ffffff;
-          box-shadow: 0 4px 12px rgba(26, 86, 219, 0.3);
+        .spec-metric-divider {
+          width: 1px;
+          background: var(--border);
+          height: 38px;
         }
 
-        /* 3. Proof Points Hover Effects */
-        .editorial-proof-item {
-          transition: transform 0.25s ease, color 0.25s ease;
-        }
-        .editorial-proof-item:hover {
-          transform: translateY(-2px);
-          color: var(--accent);
-        }
-        .composite-badge-pin {
-          animation: pinFloat 3s ease-in-out infinite;
-        }
-
-        /* 4. Core Values Interactive Elevation */
+        /* 5. Core Values Architectural Elevation */
         .editorial-values-block {
           margin-top: 40px;
           padding-top: 56px;
@@ -127,32 +249,29 @@ export default function About() {
           margin-bottom: 36px;
         }
         .editorial-value-col {
-          padding: 26px 22px;
-          border-radius: 16px;
+          padding: 24px 22px;
+          border-radius: var(--radius-md, 8px);
           background: #ffffff;
-          border: 1px solid rgba(226, 232, 240, 0.9);
-          box-shadow: 0 2px 10px rgba(15, 23, 42, 0.02);
-          transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+          border: 1px solid var(--border);
+          box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+          transition: border-color var(--t), box-shadow var(--t), transform var(--t);
           position: relative;
         }
         .editorial-value-col:hover {
-          transform: translateY(-8px);
-          border-color: #bfdbfe;
-          box-shadow: 0 16px 35px -8px rgba(26, 86, 219, 0.12);
+          transform: translateY(-4px);
+          border-color: #cbd5e1;
+          box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
         }
         .editorial-value-col:hover .editorial-val-num {
           color: var(--accent);
-          transform: scale(1.05);
         }
         .editorial-value-col:hover .editorial-val-accent-line {
-          width: 72px;
-          background: linear-gradient(90deg, #1a56db, #3b82f6);
+          width: 56px;
+          background: var(--accent);
         }
         .editorial-value-col:hover .editorial-val-icon {
-          transform: scale(1.12) rotate(6deg);
-          background: #1a56db;
+          background: var(--accent);
           color: #ffffff;
-          box-shadow: 0 6px 16px rgba(26, 86, 219, 0.25);
         }
 
         /* 5. Modern Open Timeline (Boxless, High-Precision Architectural Design) */
@@ -399,12 +518,14 @@ export default function About() {
           
           .philosophy-showcase-split {
             grid-template-columns: 1fr !important;
-            gap: 44px !important;
+            gap: 40px !important;
           }
-          .philosophy-photo-composite {
-            max-width: 600px;
+          .philosophy-photo-column {
+            max-width: 620px;
             margin: 0 auto;
             width: 100%;
+          }
+          .philosophy-photo-composite {
             aspect-ratio: 16/10 !important;
           }
 
@@ -497,16 +618,25 @@ export default function About() {
           .editorial-value-col {
             padding: 22px 18px !important;
           }
-          .editorial-directive-block {
-            padding: 18px 16px !important;
+          .philosophy-panel-row {
+            padding: 20px 18px !important;
           }
-          .editorial-directive-quote {
-            font-size: 1.02rem !important;
+          .panel-text {
+            font-size: 0.98rem !important;
             line-height: 1.6 !important;
           }
-          .editorial-proof-row {
-            gap: 10px 14px !important;
-            font-size: 0.85rem !important;
+          .philosophy-specs-bar {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+            padding: 16px 18px !important;
+          }
+          .spec-metric-divider {
+            display: none !important;
+          }
+          .philosophy-photo-caption {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 4px !important;
           }
         }
 
@@ -515,39 +645,6 @@ export default function About() {
           .intro-image-wrap img {
             min-height: 250px !important;
             max-height: 290px !important;
-          }
-          .story-floating-badge {
-            bottom: 12px !important;
-            left: 12px !important;
-            padding: 8px 12px !important;
-            gap: 8px !important;
-            border-radius: 10px !important;
-          }
-          .story-floating-badge strong {
-            font-size: 0.82rem !important;
-          }
-          .story-floating-badge span {
-            font-size: 0.7rem !important;
-          }
-
-          .composite-badge-overlay {
-            bottom: 10px !important;
-            left: 10px !important;
-            right: 10px !important;
-            padding: 10px 12px !important;
-            gap: 8px !important;
-            border-radius: 10px !important;
-          }
-          .composite-badge-title {
-            font-size: 0.82rem !important;
-          }
-          .composite-badge-sub {
-            font-size: 0.68rem !important;
-          }
-          .composite-badge-pin {
-            width: 28px !important;
-            height: 28px !important;
-            font-size: 0.9rem !important;
           }
 
           .open-timeline-station {
@@ -585,14 +682,15 @@ export default function About() {
       <section className="page-content" id="overview">
         <div className="container">
           <div className="intro-split-grid">
-            <div className="intro-image-wrap reveal">
-              <img src="img/cleanroom.jpg" alt="Top Precision assembly facility" />
-              <div className="story-floating-badge">
-                <span className="story-beacon-dot"></span>
-                <div>
-                  <strong>Bayan Lepas Hub</strong>
-                  <span>Penang Manufacturing Center</span>
-                </div>
+            <div className="intro-image-column reveal">
+              <div className="intro-image-wrap">
+                <img src="img/assembly-floor-workshop.jpg" alt="Top Precision assembly workshop floor" />
+              </div>
+              <div className="philosophy-photo-caption">
+                <span className="photo-caption-main">
+                  <i className="ph ph-buildings"></i> Bayan Lepas Facility
+                </span>
+                <span className="photo-caption-sub">Electro-Mechanical Assembly Workshop</span>
               </div>
             </div>
             <div className="intro-text reveal reveal-d1">
@@ -612,55 +710,75 @@ export default function About() {
           <div className="philosophy-showcase-split">
             <div className="philosophy-editorial-text reveal">
               <span className="section-tag">Corporate Philosophy</span>
-              <h2>Vision, Mission &amp; <span className="accent">Core Values</span></h2>
+              <h2>Vision &amp; Strategic Mission</h2>
 
-              {/* Vision Statement */}
-              <div className="editorial-directive-block">
-                <div className="editorial-directive-header">
-                  <div className="editorial-directive-icon">
-                    <i className="ph ph-eye"></i>
+              {/* Unified Executive Philosophy Panel */}
+              <div className="philosophy-unified-panel">
+                {/* Vision Section */}
+                <div className="philosophy-panel-row">
+                  <div className="panel-row-header">
+                    <span className="panel-badge">01</span>
+                    <span className="panel-title">Strategic Vision</span>
                   </div>
-                  <span className="editorial-directive-tag">Our Strategic Vision</span>
+                  <p className="panel-text">{about?.vision || ''}</p>
                 </div>
-                <p className="editorial-directive-quote">{about?.vision || ''}</p>
-              </div>
 
-              {/* Mission Statement */}
-              <div className="editorial-directive-block">
-                <div className="editorial-directive-header">
-                  <div className="editorial-directive-icon">
-                    <i className="ph ph-crosshair"></i>
+                <div className="philosophy-panel-divider"></div>
+
+                {/* Mission Section */}
+                <div className="philosophy-panel-row">
+                  <div className="panel-row-header">
+                    <span className="panel-badge panel-badge-accent">02</span>
+                    <span className="panel-title">Operational Mission</span>
                   </div>
-                  <span className="editorial-directive-tag">Our Operational Mission</span>
+                  <p className="panel-text">{about?.mission || ''}</p>
                 </div>
-                <p className="editorial-directive-quote">{about?.mission || ''}</p>
-              </div>
-
-              {/* Proof Points */}
-              <div className="editorial-proof-row">
-                <span className="editorial-proof-item">
-                  <i className="ph ph-check-circle"></i> Regional Leadership
-                </span>
-                <span className="editorial-proof-item">
-                  <i className="ph ph-check-circle"></i> Sub-Micron Precision
-                </span>
-                <span className="editorial-proof-item">
-                  <i className="ph ph-check-circle"></i> ISO 9001 Certified
-                </span>
               </div>
             </div>
 
-            {/* Right Photo Composite */}
-            <div className="philosophy-photo-composite reveal reveal-d1">
-              <img src="img/precision_turning.jpg" alt="Top Precision high-tolerance CNC machining" />
-              <div className="composite-badge-overlay">
-                <div className="composite-badge-text">
-                  <span className="composite-badge-title">Bayan Lepas Free Industrial Zone</span>
-                  <span className="composite-badge-sub">Penang, Malaysia • Advanced Manufacturing Hub</span>
-                </div>
-                <div className="composite-badge-pin">
-                  <i className="ph ph-map-pin"></i>
-                </div>
+            {/* Right Photo Column: Perfectly balanced height and alignment */}
+            <div className="philosophy-photo-column reveal reveal-d1">
+              <div className="philosophy-photo-composite">
+                <img src="img/top-precision-factory-entrance.jpg" alt="Top Precision Manufacturing Bayan Lepas Facility Entrance" />
+              </div>
+              <div className="philosophy-photo-caption">
+                <span className="photo-caption-main">
+                  <i className="ph ph-map-pin"></i> Bayan Lepas FIZ, Penang
+                </span>
+                <span className="photo-caption-sub">Top Precision Facility &amp; Logistics Dock</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Full-Width Engineering Benchmarks Bar: Plinth Foundation */}
+          <div className="philosophy-specs-bar reveal">
+            <div className="spec-metric-item">
+              <div className="spec-metric-icon">
+                <i className="ph ph-globe-hemisphere-east"></i>
+              </div>
+              <div className="spec-metric-info">
+                <span className="spec-metric-label">Regional Scope</span>
+                <strong className="spec-metric-value">Southeast Asia</strong>
+              </div>
+            </div>
+            <div className="spec-metric-divider"></div>
+            <div className="spec-metric-item">
+              <div className="spec-metric-icon">
+                <i className="ph ph-crosshair-simple"></i>
+              </div>
+              <div className="spec-metric-info">
+                <span className="spec-metric-label">Precision Standard</span>
+                <strong className="spec-metric-value">Sub-Micron Precision</strong>
+              </div>
+            </div>
+            <div className="spec-metric-divider"></div>
+            <div className="spec-metric-item">
+              <div className="spec-metric-icon">
+                <i className="ph ph-certificate"></i>
+              </div>
+              <div className="spec-metric-info">
+                <span className="spec-metric-label">Quality System</span>
+                <strong className="spec-metric-value">ISO 9001:2015</strong>
               </div>
             </div>
           </div>

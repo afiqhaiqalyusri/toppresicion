@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <main className="page-main">
       <PageHero data={{
-        image: 'img/cap-quality.jpg',
+        image: 'img/top-precision-factory-entrance.jpg',
         title: 'Contact & Request a Quote',
         breadcrumb: 'Contact & Request a Quote'
       }} />
@@ -25,18 +25,23 @@ export default function Contact() {
           <div className="contact-main-grid">
             <aside className="contact-info-panel reveal">
               <div className="contact-channels">
-                <div className="contact-channel-item" style={{ pointerEvents: 'none' }}>
-                  <span className="contact-channel-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                      <circle cx="12" cy="10" r="3"/>
-                    </svg>
-                  </span>
-                  <div className="contact-channel-text">
-                    <span className="contact-channel-label">Head Office &amp; Factory</span>
-                    <span className="contact-channel-value" style={{ whiteSpace: 'normal', lineHeight: 1.5 }}>
-                      {(contact?.factoryAddress || '').replace(/\n/g, ', ')}
+                <div className="contact-channel-item" style={{ pointerEvents: 'none', flexDirection: 'column', alignItems: 'stretch' }}>
+                  <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                    <span className="contact-channel-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                      </svg>
                     </span>
+                    <div className="contact-channel-text">
+                      <span className="contact-channel-label">Head Office &amp; Factory</span>
+                      <span className="contact-channel-value" style={{ whiteSpace: 'normal', lineHeight: 1.5 }}>
+                        {(contact?.factoryAddress || '').replace(/\n/g, ', ')}
+                      </span>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '12px', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+                    <img src="img/top-precision-factory-entrance.jpg" alt="Top Precision Manufacturing Bayan Lepas Facility" style={{ width: '100%', height: '135px', objectFit: 'cover', display: 'block' }} />
                   </div>
                 </div>
 
@@ -86,11 +91,14 @@ export default function Contact() {
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '16px', lineHeight: 1.5 }}>
                   For the fastest and most accurate quotation, please provide 3D models alongside 2D drawings.
                 </p>
-                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '14px' }}>
                   <span style={{ fontSize: '0.75rem', fontWeight: 600, padding: '4px 10px', background: 'var(--bg-alt)', color: 'var(--text)', borderRadius: '4px', border: '1px solid var(--border)' }}>.STEP / .STP</span>
                   <span style={{ fontSize: '0.75rem', fontWeight: 600, padding: '4px 10px', background: 'var(--bg-alt)', color: 'var(--text)', borderRadius: '4px', border: '1px solid var(--border)' }}>.IGES / .IGS</span>
                   <span style={{ fontSize: '0.75rem', fontWeight: 600, padding: '4px 10px', background: 'var(--bg-alt)', color: 'var(--text)', borderRadius: '4px', border: '1px solid var(--border)' }}>.DXF / .DWG</span>
                   <span style={{ fontSize: '0.75rem', fontWeight: 600, padding: '4px 10px', background: 'var(--bg-alt)', color: 'var(--text)', borderRadius: '4px', border: '1px solid var(--border)' }}>.PDF (2D)</span>
+                </div>
+                <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+                  <img src="img/engineering-dfm-cad-design.jpg" alt="In-house CAD and DFM review" style={{ width: '100%', height: '120px', objectFit: 'cover', display: 'block' }} />
                 </div>
               </div>
             </aside>

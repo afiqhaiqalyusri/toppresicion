@@ -130,14 +130,14 @@ export default function ServiceDetail() {
       }} />
 
       {service.stats && service.stats.length > 0 && (
-        <section style={{ position: 'relative', zIndex: 10, marginTop: '-60px', padding: 0, background: 'transparent' }}>
+        <section style={{ position: 'relative', zIndex: 10, marginTop: '-36px', padding: 0, background: 'transparent' }}>
           <div className="container">
             <div className="svc-stats-card">
               {service.stats.map((stat, idx) => (
                 <div key={idx} className={`svc-stat-item ${stat.icon ? 'has-icon' : ''}`}>
                   {stat.icon && (
                     <div className="svc-stat-icon-wrap">
-                      {renderIcon(stat.icon, 28)}
+                      {renderIcon(stat.icon, 20)}
                     </div>
                   )}
                   <div className="svc-stat-text-wrap">
@@ -156,22 +156,24 @@ export default function ServiceDetail() {
           display: flex;
           flex-wrap: nowrap;
           background: #ffffff;
-          border-radius: 16px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+          border-radius: 12px;
+          box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
           border: 1px solid #e2e8f0;
           overflow: hidden;
+          max-width: 860px;
+          margin: 0 auto;
         }
         .svc-stat-item {
           flex: 1;
           min-width: 0;
-          padding: 24px 28px;
+          padding: 12px 18px;
           border-right: 1px solid #edf2f7;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           text-align: center;
-          min-height: 135px;
+          min-height: 72px;
         }
         .svc-stat-item:last-child { 
           border-right: none; 
@@ -181,12 +183,12 @@ export default function ServiceDetail() {
           align-items: center;
           justify-content: center;
           text-align: left;
-          gap: 18px;
-          padding: 24px 20px;
+          gap: 12px;
+          padding: 12px 18px;
         }
         .svc-stat-icon-wrap {
-          width: 56px;
-          height: 56px;
+          width: 38px;
+          height: 38px;
           border-radius: 50%;
           background: #eff6ff;
           border: 1px solid #dbeafe;
@@ -208,30 +210,31 @@ export default function ServiceDetail() {
         }
         .svc-stat-value {
           color: #1a56db;
-          font-size: clamp(1.35rem, 2.1vw, 2.35rem);
+          font-size: clamp(1.05rem, 1.3vw, 1.28rem);
           font-weight: 800;
-          line-height: 1.1;
-          margin-bottom: 4px;
+          line-height: 1.15;
+          margin-bottom: 2px;
           white-space: nowrap;
         }
         .svc-stat-label {
           color: #475569;
-          font-size: 0.72rem;
+          font-size: 0.65rem;
           font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: 0.08em;
-          line-height: 1.35;
-          max-width: 195px;
+          letter-spacing: 0.06em;
+          line-height: 1.25;
+          max-width: 170px;
         }
 
         @media (max-width: 768px) {
           .svc-stats-card {
             flex-direction: column;
+            max-width: 100%;
           }
           .svc-stat-item {
             border-right: none;
             border-bottom: 1px solid #edf2f7;
-            padding: 18px 20px;
+            padding: 12px 16px;
             min-height: auto;
           }
           .svc-stat-item:last-child {
@@ -239,7 +242,7 @@ export default function ServiceDetail() {
           }
           .svc-stat-item.has-icon {
             justify-content: flex-start;
-            padding-left: 32px;
+            padding-left: 24px;
           }
         }
 

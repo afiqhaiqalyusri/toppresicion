@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import Card from '../components/Card';
+import CapabilityCard from '../components/CapabilityCard';
 import {
   company,
   hero,
@@ -75,26 +76,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="capabilities-section" id="capabilities" style={{ paddingBottom: '80px' }}>
+      <section className="capabilities-section" id="capabilities" style={{ paddingBottom: '90px' }}>
         <div className="container home-capabilities-container">
-          <div className="section-header reveal" style={{ marginBottom: '64px' }}>
-            <span className="section-tag">{homeCapabilities?.tagline || ''}</span>
-            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', marginBottom: '16px' }} dangerouslySetInnerHTML={{ __html: homeCapabilities?.title || '' }}></h2>
-            <p style={{ fontSize: '1.15rem', maxWidth: '700px', margin: '0 auto' }}>{homeCapabilities?.description || ''}</p>
+          <div className="section-header reveal" style={{ marginBottom: '56px' }}>
+            <span className="section-tag">{homeCapabilities?.tagline || 'Core Competencies'}</span>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', marginBottom: '16px' }} dangerouslySetInnerHTML={{ __html: homeCapabilities?.title || 'Manufacturing Capabilities' }}></h2>
+            <p style={{ fontSize: '1.15rem', maxWidth: '720px', margin: '0 auto', color: 'var(--text-body)', lineHeight: 1.7 }}>{homeCapabilities?.description || ''}</p>
           </div>
-          <div className={`cap-grid cap-grid-${services?.length || 0}`}>
-            {services && services.map((service, index) => {
-              const delayClass = index % 4 === 1 ? 'reveal-d1' : (index % 4 === 2 ? 'reveal-d2' : (index % 4 === 3 ? 'reveal-d3' : ''));
-              return (
-                <Card key={index} data={{
-                  variant: 'capability',
-                  image: service.heroImage || service.image || '',
-                  title: service.name || '',
-                  link: service.slug || service.id || service.link || '',
-                  delayClass
-                }} />
-              );
-            })}
+          <div className="capabilities-pro-grid">
+            {services && services.map((service, index) => (
+              <CapabilityCard key={index} service={service} index={index} />
+            ))}
+          </div>
+          <div className="capabilities-home-footer reveal" style={{ textAlign: 'center', marginTop: '48px' }}>
+            <Link to="/capabilities" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '14px 32px' }}>
+              Explore Full Capabilities &amp; Materials
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ width: '16px', height: '16px' }}>
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
