@@ -101,7 +101,7 @@ export default function ServiceDetail() {
     if (!services) return null;
     return services.find(s => {
       const s_slug = s.slug || (s.link || '').replace('.html', '');
-      return s_slug === slug || s.id === slug || (s_slug === 'box-build-assembly' && slug === 'sheet-metal-box-build');
+      return s_slug === slug || s.id === slug || (s_slug === 'box-build-assembly' && (slug === 'sheet-metal-box-build' || slug === 'box-build' || slug === 'sheet-metal-fabrication'));
     });
   }, [slug]);
 
@@ -110,11 +110,11 @@ export default function ServiceDetail() {
   }
 
   const relatedItems = useMemo(() => {
-    if (!service.relatedCapabilityIds || !services) return [];
+    if (!service || !service.relatedCapabilityIds || !services) return [];
     return service.relatedCapabilityIds.map(id => {
       return services.find(s => {
         const s_slug = s.slug || (s.link || '').replace('.html', '');
-        return s_slug === id || s.id === id;
+        return s_slug === id || s.id === id || (s_slug === 'box-build-assembly' && (id === 'sheet-metal-box-build' || id === 'box-build'));
       });
     }).filter(Boolean);
   }, [service]);

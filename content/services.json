@@ -92,8 +92,7 @@
         }
       ],
       "relatedCapabilityIds": [
-        "sheet-metal-box-build",
-        "quality-inspection-testing"
+        "box-build-assembly"
       ],
       "materialsTitle": ""
     },

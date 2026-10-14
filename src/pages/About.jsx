@@ -285,7 +285,7 @@ export default function About() {
         /* Desktop: Horizontal Connecting Track */
         .open-timeline-track {
           position: absolute;
-          top: 104px; /* Perfectly centered through the 52px milestone nodes */
+          top: 126px; /* Centered through the 52px milestone nodes */
           left: 14%;
           right: 14%;
           height: 3px;
@@ -886,6 +886,35 @@ export default function About() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Environmental Responsibility & Sustainability */}
+      <section className="page-content-alt" id="environment" style={{ padding: '80px 0 90px', background: 'var(--bg-2)', borderTop: '1px solid var(--border)' }}>
+        <div className="container">
+          <div className="intro-split-grid wide-gap" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: '50px', alignItems: 'center' }}>
+            <div className="intro-text reveal">
+              <span className="section-tag">Sustainability</span>
+              <h2>Environmental <span className="accent">Responsibility</span></h2>
+              <p style={{ fontSize: '1.05rem', lineHeight: 1.75, color: 'var(--text-body)', marginTop: '16px' }}>
+                {about?.environment || 'We recognize the importance of responsible manufacturing and strive to operate with greater awareness of environmental impact.'}
+              </p>
+              <div style={{ display: 'flex', gap: '14px', marginTop: '24px', flexWrap: 'wrap' }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 14px', background: '#fff', border: '1px solid var(--border)', borderRadius: '8px', fontSize: '0.85rem', fontWeight: 600 }}>
+                  <i className="ph ph-recycle" style={{ color: '#10b981', fontSize: '1.1rem' }}></i> Waste Reduction
+                </span>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 14px', background: '#fff', border: '1px solid var(--border)', borderRadius: '8px', fontSize: '0.85rem', fontWeight: 600 }}>
+                  <i className="ph ph-lightning" style={{ color: '#3b82f6', fontSize: '1.1rem' }}></i> Energy Efficiency
+                </span>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 14px', background: '#fff', border: '1px solid var(--border)', borderRadius: '8px', fontSize: '0.85rem', fontWeight: 600 }}>
+                  <i className="ph ph-shield-check" style={{ color: '#6366f1', fontSize: '1.1rem' }}></i> Regulatory Compliance
+                </span>
+              </div>
+            </div>
+            <div className="intro-image-wrap reveal reveal-d1" style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }}>
+              <img src="img/cap-finishing.jpg" alt="Sustainable and environmentally responsible manufacturing practices" style={{ width: '100%', height: '100%', minHeight: '340px', objectFit: 'cover', display: 'block' }} />
             </div>
           </div>
         </div>

@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import { contact } from '../content';
 
 export default function Contact() {
+  const [searchParams] = useSearchParams();
+  const requestedService = searchParams.get('service');
+  const quoteSubject = requestedService ? `Request for Quotation - ${requestedService}` : 'Request for Quotation';
   return (
     <main className="page-main">
       <PageHero data={{
@@ -112,10 +115,16 @@ export default function Contact() {
                   </svg>
                 </div>
                 <h3 style={{ fontSize: '1.8rem', marginBottom: '16px', fontFamily: 'var(--font-heading)' }}>Ready for a Quote?</h3>
+                {requestedService && (
+                  <div style={{ marginBottom: '18px', padding: '8px 18px', background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '9999px', color: '#1a56db', fontSize: '0.9rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '8px', alignSelf: 'center' }}>
+                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#1a56db' }}></span>
+                    Inquiring for: {requestedService}
+                  </div>
+                )}
                 <p style={{ fontSize: '1.05rem', color: 'var(--text-body)', lineHeight: 1.8, marginBottom: '28px' }}>
                   To ensure the highest accuracy for your project estimation, please send your requirements directly to our engineering team. We support precision CNC machining and integrated electro-mechanical box build assembly. Attach your 3D CAD models (STEP, IGES) and 2D drawings (PDF) along with material and quantity details.
                 </p>
-                <a href={`mailto:${contact?.enquiryEmail || ''}?subject=Request%20for%20Quotation`} className="btn btn-primary btn-lg" style={{ alignSelf: 'center', borderRadius: '9999px', transition: 'all 0.3s ease' }}>
+                <a href={`mailto:${contact?.enquiryEmail || ''}?subject=${encodeURIComponent(quoteSubject)}`} className="btn btn-primary btn-lg" style={{ alignSelf: 'center', borderRadius: '9999px', transition: 'all 0.3s ease' }}>
                   Email Our Team &rarr;
                 </a>
                 <div style={{ marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>

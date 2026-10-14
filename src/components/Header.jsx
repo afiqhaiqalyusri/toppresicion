@@ -186,7 +186,7 @@ export default function Header() {
 
               {navVisibility?.quality?.visible && (
                 <li className="has-mega">
-                  <Link to="#" className={`nav-link ${page === 'quality' ? 'active' : ''}`}>
+                  <Link to="/certificates" className={`nav-link ${page === 'certificates' || page === 'policies' ? 'active' : ''}`}>
                     Quality
                     <svg className="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M6 9l6 6 6-6"/></svg>
                   </Link>

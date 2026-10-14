@@ -21,9 +21,9 @@ export default function Careers() {
       if (selectedDeptRaw === 'all') {
         matchesDept = true;
       } else {
-        if (selectedDeptRaw === 'machining' && (department.includes('machining') || department.includes('production'))) matchesDept = true;
-        if (selectedDeptRaw === 'quality' && department.includes('quality')) matchesDept = true;
-        if (selectedDeptRaw === 'sales' && (department.includes('sales') || department.includes('admin'))) matchesDept = true;
+        if (selectedDeptRaw === 'machining' && (department.includes('machining') || department.includes('production') || department.includes('manufacturing'))) matchesDept = true;
+        if (selectedDeptRaw === 'quality' && (department.includes('quality') || department.includes('qc') || department.includes('qa'))) matchesDept = true;
+        if (selectedDeptRaw === 'internship' && (department.includes('various') || department.includes('intern') || department.includes('sales') || department.includes('admin'))) matchesDept = true;
       }
       
       return matchesSearch && matchesDept;
@@ -955,9 +955,9 @@ export default function Careers() {
             </div>
             <select id="job-dept-filter" className="job-dept-filter-select" value={deptFilter} onChange={(e) => setDeptFilter(e.target.value)}>
               <option value="all">All Departments</option>
-              <option value="machining">Machining &amp; Production</option>
-              <option value="quality">Quality Assurance</option>
-              <option value="sales">Sales &amp; Administration</option>
+              <option value="machining">Manufacturing &amp; Machining</option>
+              <option value="quality">Quality Control &amp; Assurance</option>
+              <option value="internship">Internship &amp; Various</option>
             </select>
           </div>
 
@@ -966,9 +966,9 @@ export default function Careers() {
               filteredJobs.map((job, idx) => {
                 let tagClass = '';
                 const dept = (job.department || '').toLowerCase();
-                if (dept.includes('machining') || dept.includes('production')) tagClass = 'job-tag-machining';
-                else if (dept.includes('quality')) tagClass = 'job-tag-quality';
-                else if (dept.includes('sales') || dept.includes('admin')) tagClass = 'job-tag-sales';
+                if (dept.includes('machining') || dept.includes('production') || dept.includes('manufacturing')) tagClass = 'job-tag-machining';
+                else if (dept.includes('quality') || dept.includes('qc')) tagClass = 'job-tag-quality';
+                else tagClass = 'job-tag-sales';
 
                 return (
                   <div key={idx} className="job-card-premium reveal" data-department={dept}>
